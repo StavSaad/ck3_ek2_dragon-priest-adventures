@@ -1,0 +1,77 @@
+﻿mask_krosis_modifier = {
+	court_grandeur_baseline_add = 10
+	dread_gain_mult = 0.5
+	monthly_dynasty_prestige = 0.1
+	monthly_prestige = 1
+	intrigue = 5
+	learning = 5
+	martial = 5
+}
+
+mask_nahkriin_modifier = {
+	court_grandeur_baseline_add = 10
+	dread_gain_mult = 0.5
+	monthly_dynasty_prestige = 0.1
+	monthly_prestige = 1
+	martial = 5
+}
+
+mask_otar_modifier = {
+	court_grandeur_baseline_add = 10
+	dread_gain_mult = 0.5
+	monthly_dynasty_prestige = 0.1
+	monthly_prestige = 1
+	prowess = 10
+	martial = 10
+}
+
+mask_rahgot_modifier = {
+	court_grandeur_baseline_add = 10
+	dread_gain_mult = 0.5
+	monthly_dynasty_prestige = 0.1
+	monthly_prestige = 1
+	health = monumental_health_bonus
+}
+
+mask_morokei_modifier = {
+	court_grandeur_baseline_add = 10
+	dread_gain_mult = 0.5
+	monthly_dynasty_prestige = 0.1
+	monthly_prestige = 1
+	diplomacy = 5
+}
+
+mask_vokun_modifier = {
+	court_grandeur_baseline_add = 10
+	dread_gain_mult = 0.5
+	monthly_dynasty_prestige = 0.1
+	monthly_prestige = 1
+	stewardship = 5
+}
+
+mask_volsung_modifier = {
+	court_grandeur_baseline_add = 10
+	dread_gain_mult = 0.5
+	monthly_dynasty_prestige = 0.1
+	monthly_prestige = 1
+	stewardship = 10
+	prowess = 10
+}
+
+mask_hevnoraak_modifier = {
+	court_grandeur_baseline_add = 10
+	dread_gain_mult = 0.5
+	monthly_dynasty_prestige = 0.1
+	monthly_prestige = 1
+	health = major_health_bonus
+	negate_health_penalty_add = 1
+}
+
+mask_konahrik_modifier = {
+	court_grandeur_baseline_add = 10
+	dread_gain_mult = 0.5
+	monthly_dynasty_prestige = 0.1
+	monthly_prestige = 1
+	prowess = 15
+	health = major_health_bonus
+}

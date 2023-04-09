@@ -1,0 +1,215 @@
+﻿mask_dragon_priest_krosis_template = {
+	can_equip = {
+		always = yes
+	}
+
+	can_benefit = {
+		OR = {
+			faith = {
+				has_doctrine = doctrine_pantheon_dragons
+			}
+			culture = {
+				has_cultural_pillar = heritage_atmoran
+			}
+		}
+	}
+
+	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
+	fallback = {
+		monthly_prestige = 0.25
+	}
+
+	unique = yes
+}
+
+mask_dragon_priest_nahkriin_template = {
+	can_equip = {
+		always = yes
+	}
+
+	can_benefit = {
+		OR = {
+			faith = {
+				has_doctrine = doctrine_pantheon_dragons
+			}
+			culture = {
+				has_cultural_pillar = heritage_atmoran
+			}
+		}
+	}
+
+	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
+	fallback = {
+		monthly_prestige = 0.25
+	}
+
+	unique = yes
+}
+
+mask_dragon_priest_otar_template = {
+	can_equip = {
+		always = yes
+	}
+
+	can_benefit = {
+		OR = {
+			faith = {
+				has_doctrine = doctrine_pantheon_dragons
+			}
+			culture = {
+				has_cultural_pillar = heritage_atmoran
+			}
+		}
+	}
+
+	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
+	fallback = {
+		monthly_prestige = 0.25
+	}
+
+	unique = yes
+}
+
+mask_dragon_priest_rahgot_template = {
+	can_equip = {
+		always = yes
+	}
+
+	can_benefit = {
+		OR = {
+			faith = {
+				has_doctrine = doctrine_pantheon_dragons
+			}
+			culture = {
+				has_cultural_pillar = heritage_atmoran
+			}
+		}
+	}
+
+	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
+	fallback = {
+		monthly_prestige = 0.25
+	}
+
+	unique = yes
+}
+
+mask_dragon_priest_morokei_template = {
+	can_equip = {
+		always = yes
+	}
+
+	can_benefit = {
+		OR = {
+			faith = {
+				has_doctrine = doctrine_pantheon_dragons
+			}
+			culture = {
+				has_cultural_pillar = heritage_atmoran
+			}
+		}
+	}
+
+	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
+	fallback = {
+		monthly_prestige = 0.25
+	}
+
+	unique = yes
+}
+
+mask_dragon_priest_vokun_template = {
+	can_equip = {
+		always = yes
+	}
+
+	can_benefit = {
+		OR = {
+			faith = {
+				has_doctrine = doctrine_pantheon_dragons
+			}
+			culture = {
+				has_cultural_pillar = heritage_atmoran
+			}
+		}
+	}
+
+	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
+	fallback = {
+		monthly_prestige = 0.25
+	}
+
+	unique = yes
+}
+
+mask_dragon_priest_volsung_template = {
+	can_equip = {
+		always = yes
+	}
+
+	can_benefit = {
+		OR = {
+			faith = {
+				has_doctrine = doctrine_pantheon_dragons
+			}
+			culture = {
+				has_cultural_pillar = heritage_atmoran
+			}
+		}
+	}
+
+	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
+	fallback = {
+		monthly_prestige = 0.25
+	}
+
+	unique = yes
+}
+
+mask_dragon_priest_hevnoraak_template = {
+	can_equip = {
+		always = yes
+	}
+
+	can_benefit = {
+		OR = {
+			faith = {
+				has_doctrine = doctrine_pantheon_dragons
+			}
+			culture = {
+				has_cultural_pillar = heritage_atmoran
+			}
+		}
+	}
+
+	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
+	fallback = {
+		monthly_prestige = 0.25
+	}
+
+	unique = yes
+}
+
+mask_dragon_priest_konahrik_template = {
+	can_equip = {
+		always = yes
+	}
+
+	can_benefit = {
+		OR = {
+			faith = {
+				has_doctrine = doctrine_pantheon_dragons
+			}
+			culture = {
+				has_cultural_pillar = heritage_atmoran
+			}
+		}
+	}
+
+	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
+	fallback = {
+		monthly_prestige = 0.25
+	}
+
+	unique = yes
+}

@@ -1,0 +1,402 @@
+﻿create_artifact_krosis_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+
+	# Create the artifact
+	create_artifact = {
+		name = artifact_mask_krosis_name
+		description = artifact_mask_krosis_description
+		type = helmet
+		visuals = mask_dragon_priest
+		template = mask_dragon_priest_krosis_template
+		wealth = scope:wealth
+		quality = scope:quality
+		history = {
+			type = discovered
+			actor = scope:owner
+			recipient = scope:owner
+			location = scope:owner.location
+		}
+		modifier = mask_krosis_modifier
+		save_scope_as = krosis_mask
+		decaying = no
+	}
+
+	scope:krosis_mask = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		save_scope_as = epic
+		save_scope_value_as = {
+			name = helmet_artifact
+			value = yes
+		}
+		set_variable = {
+			name = mask_dragon_priest_var
+			value = yes
+		}
+		set_variable = { name = arcana_modifier value = 15 }
+		equip_artifact_to_owner = yes
+		#set_variable = { name = magicka_modifier_flat value = 0.2 }
+		#set_variable = { name = magicka_modifier_mult value = 0.05 }
+	}
+}
+
+create_artifact_nahkriin_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+
+	# Create the artifact
+	create_artifact = {
+		name = artifact_mask_nahkriin_name
+		description = artifact_mask_nahkriin_description
+		type = helmet
+		visuals = mask_dragon_priest
+		template = mask_dragon_priest_nahkriin_template
+		wealth = scope:wealth
+		quality = scope:quality
+		history = {
+			type = discovered
+			actor = scope:owner
+			recipient = scope:owner
+			location = scope:owner.location
+		}
+		modifier = mask_nahkriin_modifier
+		save_scope_as = nahkriin_mask
+		decaying = no
+	}
+
+	scope:nahkriin_mask = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		save_scope_as = epic
+		save_scope_value_as = {
+			name = helmet_artifact
+			value = yes
+		}
+		set_variable = {
+			name = mask_dragon_priest_var
+			value = yes
+		}
+		equip_artifact_to_owner = yes
+		set_variable = { name = arcana_modifier value = 50 }
+		set_variable = { name = magicka_modifier_mult value = 0.2 }
+	}
+}
+
+create_artifact_hevnoraak_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+
+	# Create the artifact
+	create_artifact = {
+		name = artifact_mask_hevnoraak_name
+		description = artifact_mask_hevnoraak_description
+		type = helmet
+		visuals = mask_dragon_priest
+		template = mask_dragon_priest_hevnoraak_template
+		wealth = scope:wealth
+		quality = scope:quality
+		history = {
+			type = discovered
+			actor = scope:owner
+			recipient = scope:owner
+			location = scope:owner.location
+		}
+		modifier = mask_hevnoraak_modifier
+		save_scope_as = hevnoraak_mask
+		decaying = no
+	}
+
+	scope:hevnoraak_mask = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		save_scope_as = epic
+		save_scope_value_as = {
+			name = helmet_artifact
+			value = yes
+		}
+		set_variable = {
+			name = mask_dragon_priest_var
+			value = yes
+		}
+		equip_artifact_to_owner = yes
+		set_variable = { name = arcana_modifier value = 15 }
+		# set_variable = { name = magicka_modifier_flat value = 50 }
+		#set_variable = { name = magicka_modifier_mult value = 0.05 }
+	}
+}
+
+create_artifact_konahrik_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+
+	# Create the artifact
+	create_artifact = {
+		name = artifact_mask_konahrik_name
+		description = artifact_mask_konahrik_description
+		type = helmet
+		visuals = mask_dragon_priest
+		template = mask_dragon_priest_konahrik_template
+		wealth = scope:wealth
+		quality = scope:quality
+		history = {
+			type = discovered
+			actor = scope:owner
+			recipient = scope:owner
+			location = scope:owner.location
+		}
+		modifier = mask_konahrik_modifier
+		save_scope_as = konahrik_mask
+		decaying = no
+	}
+
+	scope:konahrik_mask = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		save_scope_as = epic
+		save_scope_value_as = {
+			name = helmet_artifact
+			value = yes
+		}
+		set_variable = {
+			name = mask_dragon_priest_var
+			value = yes
+		}
+		set_variable = { name = arcana_modifier value = 15 }
+		# set_variable = { name = magicka_modifier_flat value = 50 }
+		#set_variable = { name = magicka_modifier_mult value = 0.05 }
+	}
+}
+
+create_artifact_morokei_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+
+	# Create the artifact
+	create_artifact = {
+		name = artifact_mask_morokei_name
+		description = artifact_mask_morokei_description
+		type = helmet
+		visuals = mask_dragon_priest
+		template = mask_dragon_priest_morokei_template
+		wealth = scope:wealth
+		quality = scope:quality
+		history = {
+			type = discovered
+			actor = scope:owner
+			recipient = scope:owner
+			location = scope:owner.location
+		}
+		modifier = mask_morokei_modifier
+		save_scope_as = morokei_mask
+		decaying = no
+	}
+
+	scope:morokei_mask = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		save_scope_as = epic
+		save_scope_value_as = {
+			name = helmet_artifact
+			value = yes
+		}
+		set_variable = {
+			name = mask_dragon_priest_var
+			value = yes
+		}
+		equip_artifact_to_owner = yes
+		set_variable = { name = arcana_modifier value = 15 }
+		# set_variable = { name = magicka_modifier_flat value = 50 }
+		set_variable = { name = magicka_modifier_mult value = 1 }
+	}
+}
+
+create_artifact_otar_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+
+	# Create the artifact
+	create_artifact = {
+		name = artifact_mask_otar_name
+		description = artifact_mask_otar_description
+		type = helmet
+		visuals = mask_dragon_priest
+		template = mask_dragon_priest_otar_template
+		wealth = scope:wealth
+		quality = scope:quality
+		history = {
+			type = discovered
+			actor = scope:owner
+			recipient = scope:owner
+			location = scope:owner.location
+		}
+		modifier = mask_otar_modifier
+		save_scope_as = otar_mask
+		decaying = no
+	}
+
+	scope:otar_mask = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		save_scope_as = epic
+		save_scope_value_as = {
+			name = helmet_artifact
+			value = yes
+		}
+		set_variable = {
+			name = mask_dragon_priest_var
+			value = yes
+		}
+		equip_artifact_to_owner = yes
+		set_variable = { name = arcana_modifier value = 15 }
+		# set_variable = { name = magicka_modifier_flat value = 50 }
+		#set_variable = { name = magicka_modifier_mult value = 0.05 }
+	}
+}
+
+create_artifact_rahgot_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+
+	# Create the artifact
+	create_artifact = {
+		name = artifact_mask_rahgot_name
+		description = artifact_mask_rahgot_description
+		type = helmet
+		visuals = mask_dragon_priest
+		template = mask_dragon_priest_rahgot_template
+		wealth = scope:wealth
+		quality = scope:quality
+		history = {
+			type = discovered
+			actor = scope:owner
+			recipient = scope:owner
+			location = scope:owner.location
+		}
+		modifier = mask_rahgot_modifier
+		save_scope_as = rahgot_mask
+		decaying = no
+	}
+
+	scope:rahgot_mask = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		save_scope_as = epic
+		save_scope_value_as = {
+			name = helmet_artifact
+			value = yes
+		}
+		set_variable = {
+			name = mask_dragon_priest_var
+			value = yes
+		}
+		equip_artifact_to_owner = yes
+		set_variable = { name = arcana_modifier value = 15 }
+		# set_variable = { name = magicka_modifier_flat value = 50 }
+		#set_variable = { name = magicka_modifier_mult value = 0.05 }
+	}
+}
+
+create_artifact_vokun_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+
+	# Create the artifact
+	create_artifact = {
+		name = artifact_mask_vokun_name
+		description = artifact_mask_vokun_description
+		type = helmet
+		visuals = mask_dragon_priest
+		template = mask_dragon_priest_vokun_template
+		wealth = scope:wealth
+		quality = scope:quality
+		history = {
+			type = discovered
+			actor = scope:owner
+			recipient = scope:owner
+			location = scope:owner.location
+		}
+		modifier = mask_vokun_modifier
+		save_scope_as = vokun_mask
+		decaying = no
+	}
+
+	scope:vokun_mask = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		save_scope_as = epic
+		save_scope_value_as = {
+			name = helmet_artifact
+			value = yes
+		}
+		set_variable = {
+			name = mask_dragon_priest_var
+			value = yes
+		}
+		equip_artifact_to_owner = yes
+		set_variable = { name = arcana_modifier value = 15 }
+		# set_variable = { name = magicka_modifier_flat value = 50 }
+		set_variable = { name = magicka_modifier_mult value = 0.2 }
+	}
+}
+
+create_artifact_volsung_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+	# Not really used, but if we don't set the scopes we get errors in the feature selection
+	set_artifact_rarity_illustrious = yes
+
+
+	# Create the artifact
+	create_artifact = {
+		name = artifact_mask_volsung_name
+		description = artifact_mask_volsung_description
+		type = helmet
+		visuals = mask_dragon_priest
+		template = mask_dragon_priest_volsung_template
+		wealth = scope:wealth
+		quality = scope:quality
+		history = {
+			type = discovered
+			actor = scope:owner
+			recipient = scope:owner
+			location = scope:owner.location
+		}
+		modifier = mask_volsung_modifier
+		save_scope_as = volsung_mask
+		decaying = no
+	}
+
+	scope:volsung_mask = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		save_scope_as = epic
+		save_scope_value_as = {
+			name = helmet_artifact
+			value = yes
+		}
+		set_variable = {
+			name = mask_dragon_priest_var
+			value = yes
+		}
+		equip_artifact_to_owner = yes
+		set_variable = { name = arcana_modifier value = 15 }
+		# set_variable = { name = magicka_modifier_flat value = 50 }
+		#set_variable = { name = magicka_modifier_mult value = 0.05 }
+	}
+}

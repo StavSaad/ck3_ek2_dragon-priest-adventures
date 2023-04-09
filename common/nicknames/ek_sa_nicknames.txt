@@ -1,0 +1,7 @@
+﻿nick_the_mad = {}
+nick_the_sorrowful = {}
+nick_the_deathless = {}
+nick_the_vengeful = {}
+nick_the_brutal= {}
+nick_the_angry = {}
+nick_the_horrible = {}

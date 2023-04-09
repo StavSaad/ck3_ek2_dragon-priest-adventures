@@ -1,0 +1,97 @@
+﻿yearly_global_pulse = {
+	on_actions = {
+		delay = { days = { 25 315 } }
+		ek_sa_wake_dragon_priest
+		ek_sa_progress_dragon_priest
+		delay = { days = { 35 305 } }
+		ek_sa_start_war_dragon_priest
+	}
+}
+
+ek_sa_wake_dragon_priest = {
+
+	trigger = {
+		title:c_shearpoint = { # this is a random scope
+			holder = {
+				current_year > 141
+			}
+		}
+	}
+
+	random_on_action = {
+		chance_of_no_event = {
+			value = 240
+		}
+		10 = ek_sa_start_krosis
+	}
+}
+
+ek_sa_progress_dragon_priest = {
+	on_actions = {
+		ek_sa_progress_krosis
+	}
+}
+
+ek_sa_start_krosis = {
+
+	trigger = {
+		NOT = {
+			has_global_variable = ek_sa_start_krosis
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = -1
+			has_global_variable = ek_sa_start_krosis
+		}
+	}
+
+	events = {
+		ek_sa_krosis.0001
+	}
+
+}
+
+ek_sa_progress_krosis = {
+
+	trigger = {
+		AND = {
+			has_global_variable = ek_sa_start_krosis
+			title:d_krosis = {
+				holder = {
+					is_at_war = no
+				}
+			}
+		}
+	}
+
+	events = {
+		ek_sa_krosis.0003
+	}
+
+}
+
+ek_sa_start_war_dragon_priest = {
+	on_actions = {
+		delay = { months = { 3 8 } }
+		ek_sa_start_war_krosis
+	}
+}
+
+ek_sa_start_war_krosis = {
+	trigger = {
+		AND = {
+			has_global_variable = ek_sa_start_krosis
+			var:ek_sa_krosis_progress > 10
+		}
+	}
+
+	random_events = {
+		chance_of_no_event = {
+			value = 8
+		}
+		2 = ek_sa_krosis.0004
+	}
+}

@@ -1,0 +1,14 @@
+﻿story_cycle_krosis = {
+
+	on_setup = {
+
+	}
+
+	on_end = {
+		set_variable = {
+			name = ek_sa_krosis_slain
+			value = true
+		}
+	}
+
+}

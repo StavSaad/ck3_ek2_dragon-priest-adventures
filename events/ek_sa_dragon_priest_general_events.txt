@@ -1,0 +1,19 @@
+namespace = ek_sa_dragon_priest
+
+ek_sa_dragon_priest.001 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		scope:defeated_priest = {
+			if = {
+				limit = {
+					has_title = title:d_krosis
+					root = {
+						trigger_event = ek_sa_krosis.0005
+					}
+				}
+			}
+		}
+	}
+}

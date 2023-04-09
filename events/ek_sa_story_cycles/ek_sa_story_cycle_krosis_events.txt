@@ -1,0 +1,171 @@
+﻿namespace = ek_sa_krosis
+
+ek_sa_krosis.0001 = {
+	type = empty
+	hidden = yes
+
+	immediate = {
+		title:c_shearpoint = {
+			holder = {
+				create_story = story_cycle_krosis
+				trigger_event = ek_sa_krosis.0002
+			}
+		}
+		set_global_variable = ek_sa_start_krosis
+	}
+}
+
+ek_sa_krosis.0002 = {
+	type = character_event
+	title = ek_sa_krosis.0002.t
+	desc = ek_sa_krosis.0002.desc
+
+	theme = faith
+
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+
+	immediate = {
+		hidden_effect = {
+			ek_sa_create_dragon_priest_effect = {
+				PRIEST = krosis
+				LOCATION = c_shearpoint
+			}
+			title:d_krosis = {
+				holder = {
+					save_scope_as = dragon_priest_krosis
+				}
+			}
+		}
+	}
+
+	option = {
+		flavor = ek_sa_krosis.0002.a.flavor
+		name = ek_sa_krosis.0002.a
+		hidden_effect = {
+			set_variable = {
+				name = ek_sa_krosis_progress
+				value = 0
+			}
+		}
+	}
+
+}
+
+ek_sa_krosis.0003 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		title:d_krosis = {
+			holder = {
+				save_scope_as = dragon_priest_krosis
+			}
+		}
+	}
+
+	option = {
+		ai_chance = {
+			base = 50
+		}
+		change_variable = {
+			name = ek_sa_krosis_progress
+			add = 1
+		}
+	}
+
+	option = {
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	option = {
+		ai_chance = {
+			base = 10
+		}
+		change_variable = {
+			name = ek_sa_krosis_progress
+			add = 2
+		}
+	}
+
+	option = {
+		ai_chance = {
+			base = 10
+		}
+		change_variable = {
+			name = ek_sa_krosis_progress
+			subtract = 1
+		}
+	}
+
+}
+
+ek_sa_krosis.0004 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		title:d_krosis = {
+			holder = {
+				save_scope_as = krosis
+			}
+		}
+		title:c_shearpoint = {
+			holder = {
+				top_liege = {
+					save_scope_as = war_target
+				}
+			}
+		}
+	}
+
+	option = {
+		scope:krosis = {
+			add_pressed_claim = title:c_shearpoint
+			start_war = {
+				cb = dragon_priest_claim_cb
+				target = scope:war_target
+				target_title = title:c_shearpoint
+			}
+			spawn_army = {
+				men_at_arms = {
+					stacks = var:ek_sa_krosis_progress
+					type = risen_dead
+				}
+				location = title:c_shearpoint.title_province
+				name = "risen_dead"
+				inheritable = no
+			}
+			if = {
+				limit = {
+					var:ek_sa_krosis_progress > 20
+				}
+				change_variable = {
+					name = ek_sa_krosis_progress
+					substract = 20
+				}
+				get_dragon_name = yes
+				spawn_army = {
+					men_at_arms = {
+						type = dragons
+						stacks = var:ek_sa_krosis_progress
+					}
+					inheritable = no
+					location = title:c_shearpoint.title_province
+					save_scope_as = summoned_dragon
+					name = ek_religious_army
+				}
+			}
+		}
+	}
+}
+
+ek_sa_krosis.0005 = {
+	type = character_event
+	hidden = yes
+	# TODO - create krosis defeated event
+}

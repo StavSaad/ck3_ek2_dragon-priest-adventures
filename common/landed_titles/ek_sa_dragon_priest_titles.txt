@@ -1,0 +1,163 @@
+﻿@correct_culture_primary_score = 100
+@better_than_the_alternatives_score = 50
+@always_primary_score = 1000
+
+d_krosis = {
+	color=skyrim_gold
+	
+
+    ignore_titularity_for_title_weighting = yes
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
+	capital = c_shearpoint
+
+	landless = yes
+	ruler_uses_title_name = no
+	definite_form = yes
+	de_jure_drift_disabled = yes
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+	always_follows_primary_heir = yes
+}
+
+d_rahgot = {
+	color=skyrim_purple
+	
+
+    ignore_titularity_for_title_weighting = yes
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
+	capital = c_smokefrost
+
+	landless = yes
+	ruler_uses_title_name = no
+	definite_form = yes
+	de_jure_drift_disabled = yes
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+	always_follows_primary_heir = yes
+}
+
+d_nahkriin = {
+	color=skyrim_mblue
+	
+
+    ignore_titularity_for_title_weighting = yes
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
+	capital = c_bitterblade
+
+	landless = yes
+	ruler_uses_title_name = no
+	definite_form = yes
+	de_jure_drift_disabled = yes
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+	always_follows_primary_heir = yes
+}
+
+d_otar = {
+	color=skyrim_mgreen
+	
+
+    ignore_titularity_for_title_weighting = yes
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
+	capital = c_ragnvald
+
+	landless = yes
+	ruler_uses_title_name = no
+	definite_form = yes
+	de_jure_drift_disabled = yes
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+	always_follows_primary_heir = yes
+}
+
+d_vokun = {
+	color={ 38 38 38 }
+	
+
+    ignore_titularity_for_title_weighting = yes
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
+	capital = c_high_gate
+
+	landless = yes
+	ruler_uses_title_name = no
+	definite_form = yes
+	de_jure_drift_disabled = yes
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+	always_follows_primary_heir = yes
+}
+
+d_volsung = {
+	color={ 38 38 38 }
+	
+
+    ignore_titularity_for_title_weighting = yes
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
+	capital = c_deepwood
+
+	landless = yes
+	ruler_uses_title_name = no
+	definite_form = yes
+	de_jure_drift_disabled = yes
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+	always_follows_primary_heir = yes
+}
+
+d_hevnoraak = {
+	color={ 38 38 38 }
+	
+
+    ignore_titularity_for_title_weighting = yes
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
+	capital = c_valthume
+
+	landless = yes
+	ruler_uses_title_name = no
+	definite_form = yes
+	de_jure_drift_disabled = yes
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+	always_follows_primary_heir = yes
+}
+
+d_morokei = {
+	color={ 38 38 38 }
+	
+
+    ignore_titularity_for_title_weighting = yes
+	ai_primary_priority = {
+		add = @always_primary_score
+	}
+
+	capital = c_valkygg
+
+	landless = yes
+	ruler_uses_title_name = no
+	definite_form = yes
+	de_jure_drift_disabled = yes
+	no_automatic_claims = yes
+	destroy_if_invalid_heir = yes
+	always_follows_primary_heir = yes
+}

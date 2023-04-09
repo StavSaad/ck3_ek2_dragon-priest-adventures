@@ -1,0 +1,413 @@
+﻿ek_sa_dragon_priest = {
+	age = { 
+		value = current_year
+		subtract = 0
+	}
+	faith = faith:dragon_cult
+	culture = culture:atmoran
+	
+	gender_female_chance = 0
+
+	#Skills
+	diplomacy = { min_template_low_skill max_template_high_skill }
+	martial = { min_template_low_skill max_template_high_skill }
+	stewardship = { min_template_low_skill max_template_decent_skill }
+	intrigue = { min_template_decent_skill max_template_high_skill }
+	learning = { min_template_low_skill max_template_high_skill }
+	prowess = { min_template_low_skill max_template_decent_skill }	
+	
+	trait = necromancer
+	trait = lich_character
+	trait = education_magical_ability_4
+	trait = education_learning_4
+	trait = arcana_good_3
+	trait = zealous
+	trait = physique_bad_2
+	
+	#Personality
+	random_traits_list = {
+		count = 3
+		wrathful = {}
+		arrogant = {}
+		brave = {}
+		ambitious = {}
+		diligent = {}
+		gregarious = {}
+		stubborn = {}
+		vengeful = {}
+		patient = {}
+		zealous = {}
+		honest = {}
+		deceitful = {}
+	}
+	
+	after_creation = {
+		add_arcana_skill = { VALUE = "{ 30 30 }" }
+		ek_character_setup_effect = yes
+		ek_magic_perks_effect = yes
+	}
+}
+
+dragon_priest_nahkriin = {
+	age = { 
+		value = current_year
+		subtract = 0
+	}
+	faith = faith:dragon_cult
+	culture = culture:atmoran
+
+	name = Nahkriin
+	
+	gender_female_chance = 0
+
+	#Skills
+	diplomacy = { min_template_low_skill max_template_high_skill }
+	martial = { min_template_low_skill max_template_high_skill }
+	stewardship = { min_template_low_skill max_template_decent_skill }
+	intrigue = { min_template_decent_skill max_template_high_skill }
+	learning = { min_template_low_skill max_template_high_skill }
+	prowess = { min_template_low_skill max_template_decent_skill }	
+	
+	trait = necromancer
+	trait = lich_character
+	trait = education_magical_ability_4
+	trait = education_learning_4
+	trait = arcana_good_3
+	trait = zealous
+	trait = physique_bad_2
+	
+	#Personality
+	random_traits_list = {
+		count = 3
+		wrathful = {}
+		arrogant = {}
+		brave = {}
+		ambitious = {}
+		diligent = {}
+		gregarious = {}
+		stubborn = {}
+		vengeful = {}
+		patient = {}
+		zealous = {}
+		honest = {}
+		deceitful = {}
+	}
+	
+	after_creation = {
+		add_arcana_skill = { VALUE = "{ 30 30 }" }
+		ek_character_setup_effect = yes
+		ek_magic_perks_effect = yes
+	}
+}
+
+dragon_priest_otar = {
+	age = { 
+		value = current_year
+		subtract = 0
+	}
+	faith = faith:dragon_cult
+	culture = culture:atmoran
+
+	name = Otar
+	
+	gender_female_chance = 0
+
+	#Skills
+	diplomacy = { min_template_low_skill max_template_high_skill }
+	martial = { min_template_low_skill max_template_high_skill }
+	stewardship = { min_template_low_skill max_template_decent_skill }
+	intrigue = { min_template_decent_skill max_template_high_skill }
+	learning = { min_template_low_skill max_template_high_skill }
+	prowess = { min_template_low_skill max_template_decent_skill }	
+	
+	trait = necromancer
+	trait = lich_character
+	trait = education_magical_ability_4
+	trait = education_learning_4
+	trait = arcana_good_3
+	trait = zealous
+	trait = physique_bad_2
+	
+	#Personality
+	random_traits_list = {
+		count = 3
+		wrathful = {}
+		arrogant = {}
+		brave = {}
+		ambitious = {}
+		diligent = {}
+		gregarious = {}
+		stubborn = {}
+		vengeful = {}
+		patient = {}
+		zealous = {}
+		honest = {}
+		deceitful = {}
+	}
+	
+	after_creation = {
+		add_arcana_skill = { VALUE = "{ 30 30 }" }
+		ek_character_setup_effect = yes
+		ek_magic_perks_effect = yes
+	}
+}
+
+dragon_priest_rahgot = {
+	age = { 
+		value = current_year
+		subtract = 0
+	}
+	faith = faith:dragon_cult
+	culture = culture:atmoran
+
+	name = Rahgot
+	
+	gender_female_chance = 0
+
+	#Skills
+	diplomacy = { min_template_low_skill max_template_high_skill }
+	martial = { min_template_low_skill max_template_high_skill }
+	stewardship = { min_template_low_skill max_template_decent_skill }
+	intrigue = { min_template_decent_skill max_template_high_skill }
+	learning = { min_template_low_skill max_template_high_skill }
+	prowess = { min_template_low_skill max_template_decent_skill }	
+	
+	trait = necromancer
+	trait = lich_character
+	trait = education_magical_ability_4
+	trait = education_learning_4
+	trait = arcana_good_3
+	trait = zealous
+	trait = physique_bad_2
+	
+	#Personality
+	random_traits_list = {
+		count = 3
+		wrathful = {}
+		arrogant = {}
+		brave = {}
+		ambitious = {}
+		diligent = {}
+		gregarious = {}
+		stubborn = {}
+		vengeful = {}
+		patient = {}
+		zealous = {}
+		honest = {}
+		deceitful = {}
+	}
+	
+	after_creation = {
+		add_arcana_skill = { VALUE = "{ 30 30 }" }
+		ek_character_setup_effect = yes
+		ek_magic_perks_effect = yes
+	}
+}
+
+dragon_priest_vokun = {
+	age = { 
+		value = current_year
+		subtract = 0
+	}
+	faith = faith:dragon_cult
+	culture = culture:atmoran
+
+	name = Vokun
+	
+	gender_female_chance = 0
+
+	#Skills
+	diplomacy = { min_template_low_skill max_template_high_skill }
+	martial = { min_template_low_skill max_template_high_skill }
+	stewardship = { min_template_low_skill max_template_decent_skill }
+	intrigue = { min_template_decent_skill max_template_high_skill }
+	learning = { min_template_low_skill max_template_high_skill }
+	prowess = { min_template_low_skill max_template_decent_skill }	
+	
+	trait = necromancer
+	trait = lich_character
+	trait = education_magical_ability_4
+	trait = education_learning_4
+	trait = arcana_good_3
+	trait = zealous
+	trait = physique_bad_2
+	
+	#Personality
+	random_traits_list = {
+		count = 3
+		wrathful = {}
+		arrogant = {}
+		brave = {}
+		ambitious = {}
+		diligent = {}
+		gregarious = {}
+		stubborn = {}
+		vengeful = {}
+		patient = {}
+		zealous = {}
+		honest = {}
+		deceitful = {}
+	}
+	
+	after_creation = {
+		add_arcana_skill = { VALUE = "{ 30 30 }" }
+		ek_character_setup_effect = yes
+		ek_magic_perks_effect = yes
+	}
+}
+
+dragon_priest_morokei = {
+	age = { 
+		value = current_year
+		subtract = 0
+	}
+	faith = faith:dragon_cult
+	culture = culture:atmoran
+
+	name = Morokei
+	
+	gender_female_chance = 0
+
+	#Skills
+	diplomacy = { min_template_low_skill max_template_high_skill }
+	martial = { min_template_low_skill max_template_high_skill }
+	stewardship = { min_template_low_skill max_template_decent_skill }
+	intrigue = { min_template_decent_skill max_template_high_skill }
+	learning = { min_template_low_skill max_template_high_skill }
+	prowess = { min_template_low_skill max_template_decent_skill }	
+	
+	trait = necromancer
+	trait = lich_character
+	trait = education_magical_ability_4
+	trait = education_learning_4
+	trait = arcana_good_3
+	trait = zealous
+	trait = physique_bad_2
+	
+	#Personality
+	random_traits_list = {
+		count = 3
+		wrathful = {}
+		arrogant = {}
+		brave = {}
+		ambitious = {}
+		diligent = {}
+		gregarious = {}
+		stubborn = {}
+		vengeful = {}
+		patient = {}
+		zealous = {}
+		honest = {}
+		deceitful = {}
+	}
+	
+	after_creation = {
+		add_arcana_skill = { VALUE = "{ 30 30 }" }
+		ek_character_setup_effect = yes
+		ek_magic_perks_effect = yes
+	}
+}
+
+dragon_priest_volsung = {
+	age = { 
+		value = current_year
+		subtract = 0
+	}
+	faith = faith:dragon_cult
+	culture = culture:atmoran
+
+	name = Volsung
+	
+	gender_female_chance = 0
+
+	#Skills
+	diplomacy = { min_template_low_skill max_template_high_skill }
+	martial = { min_template_low_skill max_template_high_skill }
+	stewardship = { min_template_low_skill max_template_decent_skill }
+	intrigue = { min_template_decent_skill max_template_high_skill }
+	learning = { min_template_low_skill max_template_high_skill }
+	prowess = { min_template_low_skill max_template_decent_skill }	
+	
+	trait = necromancer
+	trait = lich_character
+	trait = education_magical_ability_4
+	trait = education_learning_4
+	trait = arcana_good_3
+	trait = zealous
+	trait = physique_bad_2
+	
+	#Personality
+	random_traits_list = {
+		count = 3
+		wrathful = {}
+		arrogant = {}
+		brave = {}
+		ambitious = {}
+		diligent = {}
+		gregarious = {}
+		stubborn = {}
+		vengeful = {}
+		patient = {}
+		zealous = {}
+		honest = {}
+		deceitful = {}
+	}
+	
+	after_creation = {
+		add_arcana_skill = { VALUE = "{ 30 30 }" }
+		ek_character_setup_effect = yes
+		ek_magic_perks_effect = yes
+	}
+}
+
+dragon_priest_hevnoraak = {
+	age = { 
+		value = current_year
+		subtract = 0
+	}
+	faith = faith:dragon_cult
+	culture = culture:atmoran
+
+	name = Hevnoraak
+	
+	gender_female_chance = 0
+
+	#Skills
+	diplomacy = { min_template_low_skill max_template_high_skill }
+	martial = { min_template_low_skill max_template_high_skill }
+	stewardship = { min_template_low_skill max_template_decent_skill }
+	intrigue = { min_template_decent_skill max_template_high_skill }
+	learning = { min_template_low_skill max_template_high_skill }
+	prowess = { min_template_low_skill max_template_decent_skill }	
+	
+	trait = necromancer
+	trait = lich_character
+	trait = education_magical_ability_4
+	trait = education_learning_4
+	trait = arcana_good_3
+	trait = zealous
+	trait = physique_bad_2
+	
+	#Personality
+	random_traits_list = {
+		count = 3
+		wrathful = {}
+		arrogant = {}
+		brave = {}
+		ambitious = {}
+		diligent = {}
+		gregarious = {}
+		stubborn = {}
+		vengeful = {}
+		patient = {}
+		zealous = {}
+		honest = {}
+		deceitful = {}
+	}
+	
+	after_creation = {
+		add_arcana_skill = { VALUE = "{ 30 30 }" }
+		ek_character_setup_effect = yes
+		ek_magic_perks_effect = yes
+	}
+}

@@ -1,0 +1,111 @@
+﻿ek_sa_set_dragon_priest_name = {
+	if = {
+		limit = {
+			scope:dragon_priest_$PRIEST$ = {
+				has_title = title:d_krosis
+			}
+		}
+		scope:dragon_priest_$PRIEST$ = {
+			change_first_name = Krosis
+			give_nickname = nick_the_sorrowful
+		}
+	}
+	if = {
+		limit = {
+			scope:dragon_priest_$PRIEST$ = {
+				has_title = title:d_nahkriin
+			}
+		}
+		scope:dragon_priest_$PRIEST$ = {
+			change_first_name = Nahkriin
+			give_nickname = nick_the_vengeful
+		}
+	}
+	if = {
+		limit = {
+			scope:dragon_priest_$PRIEST$ = {
+				has_title = title:d_otar
+			}
+		}
+		scope:dragon_priest_$PRIEST$ = {
+			change_first_name = Otar
+			give_nickname = nick_the_mad
+		}
+	}
+	if = {
+		limit = {
+			scope:dragon_priest_$PRIEST$ = {
+				has_title = title:d_rahgot
+			}
+		}
+		scope:dragon_priest_$PRIEST$ = {
+			change_first_name = Rahgot
+			give_nickname = nick_the_angry
+		}
+	}
+	if = {
+		limit = {
+			scope:dragon_priest_$PRIEST$ = {
+				has_title = title:d_vokun
+			}
+		}
+		scope:dragon_priest_$PRIEST$ = {
+			change_first_name = Vokun
+		}
+	}
+	if = {
+		limit = {
+			scope:dragon_priest_$PRIEST$ = {
+				has_title = title:d_volsung
+			}
+		}
+		scope:dragon_priest_$PRIEST$ = {
+			change_first_name = Volsung
+			give_nickname = nick_the_horrible
+		}
+	}
+	if = {
+		limit = {
+			scope:dragon_priest_$PRIEST$ = {
+				has_title = title:d_hevnoraak
+			}
+		}
+		scope:dragon_priest_$PRIEST$ = {
+			change_first_name = Hevnoraak
+			give_nickname = nick_the_brutal
+		}
+	}
+	if = {
+		limit = {
+			scope:dragon_priest_$PRIEST$ = {
+				has_title = title:d_morokei
+			}
+		}
+		scope:dragon_priest_$PRIEST$ = {
+			change_first_name = Morokei
+			give_nickname = nick_the_deathless
+		}
+	}
+}
+
+ek_sa_create_dragon_priest_effect = {
+	create_character = {
+		template = ek_sa_dragon_priest
+		dynasty = none
+		location = title:$LOCATION$.title_province
+		save_scope_as = dragon_priest_$PRIEST$
+	}
+	scope:dragon_priest_$PRIEST$ = {
+		create_artifact_$PRIEST$_effect = {
+			OWNER = scope:dragon_priest_$PRIEST$
+		}
+		get_title = title:d_$PRIEST$
+		# change_government = theocracy_government
+		ek_sa_set_dragon_priest_name = {
+			PRIEST = $PRIEST$
+		}
+		add_character_flag = {
+			flag = dragon_priest_$PRIEST$
+		}
+	}
+}
