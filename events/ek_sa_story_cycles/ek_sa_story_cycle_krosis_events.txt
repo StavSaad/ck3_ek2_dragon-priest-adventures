@@ -172,6 +172,9 @@ ek_sa_krosis.0006 = {
 	desc = ek_sa_krosis.0006.desc
 	theme = faith
 	immediate = {
+		root = {
+			save_scope_as = funder
+		}
 		ordered_courtier = {
 			ordered_knight = {
 				limit = {
@@ -193,7 +196,16 @@ ek_sa_krosis.0006 = {
 		title:d_krosis = {
 			holder = {
 				save_scope_as = krosis
+				save_scope_as = sc_defender
 			}
+		}
+		save_scope_value_as = {
+			name = fatality
+			value = flag:always
+		}
+		save_scope_value_as = {
+			name = locale
+			value = flag:terrain_scope
 		}
 	}
 
@@ -220,13 +232,16 @@ ek_sa_krosis.0006 = {
 
 	option = {
 		name = ek_sa_krosis.0006.a
-		root = {
-			save_scope_as = attacker
-		}
 		highlight_portrait = root
-		trigger_event = {
-			days = 21
-			id = ek_sa_krosis.0007
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = root
+			SC_ATTACKER = root
+			SC_DEFENDER = scope:krosis
+			FATALITY = no
+			FIXED = no
+			LOCALE = terrain_scope
+			OUTPUT_EVENT = ek_sa_krosis.0007
+			INVALIDATION_EVENT = ek_sa_krosis.0007	#In a real event, this would obviously be a different even to the output.
 		}
 	}
 
@@ -236,12 +251,18 @@ ek_sa_krosis.0006 = {
 			exists = scope:marshal
 		}
 		scope:marshal = {
-			save_scope_as = attacker
+			save_scope_as = sc_attacker
 		}
 		highlight_portrait = scope:marshal
-		trigger_event = {
-			days = 21
-			id = ek_sa_krosis.0007
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = root
+			SC_ATTACKER = scope:marshal
+			SC_DEFENDER = scope:krosis
+			FATALITY = no
+			FIXED = no
+			LOCALE = terrain_scope
+			OUTPUT_EVENT = ek_sa_krosis.0007
+			INVALIDATION_EVENT = ek_sa_krosis.0007	#In a real event, this would obviously be a different even to the output.
 		}
 	}
 
@@ -251,12 +272,18 @@ ek_sa_krosis.0006 = {
 			exists = scope:volunteer_knight
 		}
 		scope:volunteer_knight = {
-			save_scope_as = attacker
+			save_scope_as = sc_attacker
 		}
 		highlight_portrait = scope:volunteer_knight
-		trigger_event = {
-			days = 21
-			id = ek_sa_krosis.0007
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = root
+			SC_ATTACKER = scope:volunteer_knight
+			SC_DEFENDER = scope:krosis
+			FATALITY = no
+			FIXED = no
+			LOCALE = terrain_scope
+			OUTPUT_EVENT = ek_sa_krosis.0007
+			INVALIDATION_EVENT = ek_sa_krosis.0007	#In a real event, this would obviously be a different even to the output.
 		}
 	}
 
@@ -271,42 +298,47 @@ ek_sa_krosis.0007 = {
 	hidden = yes
 
 	immediate = {
-		scope:attacker = {
-			duel = {
-				skill = prowess
-				target = scope:krosis
-				50 = {
-					desc = ek_sa_krosis.0007.duel.success
-					compare_modifier = {
-						value = scope:duel_value
-						multiplier = 1
-					}
-					destroy_title = title:d_krosis
-					scope:krosis = {
-						every_character_artifact = {
-							set_owner = root
-						}
-						death = {
-							killer = scope:attacker
-							death_reason = death_duel
-						}
-					}
-					root = {
-						trigger_event = ek_sa_krosis.0008
+		if = {
+			limit = {
+				scope:sc_loser = scope:krosis
+			}
+			title:d_krosis = {
+				holder = {
+					every_character_artifact = {
+						set_owner = scope:funder
 					}
 				}
-				50 = {
-					desc = ek_sa_krosis.0007.duel.failure
-					compare_modifier = {
-						value = scope:duel_value
-						multiplier = -0.5
+			}
+			destroy_title = title:d_krosis
+			scope:krosis = {
+				death = {
+					killer = scope:victor
+					death_reason = death_duel
+				}
+			}
+			set_global_variable = ek_sa_krosis_slain
+			scope:funder = {
+				trigger_event = ek_sa_krosis.0008
+			}
+		}
+		if = {
+			limit = {
+				scope:sc_victor = scope:krosis
+			}
+			scope:sc_loser = {
+				death = {
+					killer = scope:krosis
+					death_reason = death_duel
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						scope:loser = scope:funder
 					}
-					scope:attacker = {
-						death = {
-							killer = scope:krosis
-							death_reason = death_duel
-						}
-					}
+				}
+				scope:funder = {
+					trigger_event = ek_sa_krosis.0009
 				}
 			}
 		}
@@ -328,12 +360,30 @@ ek_sa_krosis.0008 = {
 		character = scope:attacker
 		animation = victorious
 	}
-	right_portrait = {
-		character = scope:krosis
-		animation = fear
-	}
 
 	option = {
 		name = ek_sa_krosis.0008.a
+	}
+}
+
+ek_sa_krosis.0009 = {
+	type = character_event
+	theme = faith
+
+	desc = ek_sa_krosis.0009.desc
+	title = ek_sa_krosis.0009.t
+
+	left_portrait = {
+		character = scope:sc_loser
+		animation = fear
+	}
+
+	right_portrait = {
+		character = scope:funder
+		animation = worry
+	}
+
+	option = {
+		name = ek_sa_krosis.0009.a
 	}
 }
