@@ -1,4 +1,4 @@
-ek_sa_expedition_krosis_decision = {
+﻿ek_sa_expedition_krosis_decision = {
 
 	desc = ek_sa_expedition_krosis_decision_desc
 	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
@@ -15,7 +15,7 @@ ek_sa_expedition_krosis_decision = {
 			title:c_shearpoint = {
 				holder = root
 			}
-			is_liege_or_above_of = title:c_shearpoint
+			is_liege_or_above_of = title:c_shearpoint.holder
 		}
 	}
 

@@ -5,10 +5,7 @@
 	}
 
 	on_end = {
-		set_variable = {
-			name = ek_sa_krosis_slain
-			value = true
-		}
+		set_variable = ek_sa_krosis_slain
 	}
 
 }
