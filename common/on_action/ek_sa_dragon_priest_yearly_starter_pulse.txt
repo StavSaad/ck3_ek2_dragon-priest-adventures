@@ -101,3 +101,26 @@ ek_sa_start_war_krosis = {
 		2 = ek_sa_krosis.0004
 	}
 }
+
+on_war_won_defender = {
+	trigger = {
+		OR = {
+			scope:attacker = {
+				has_title = title:d_krosis
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				scope:attacker = {
+					has_title = title:d_krosis
+				}
+			}
+			scope:defender = {
+				trigger_event = ek_sa_krosis.0005
+			}
+		}
+	}
+}
