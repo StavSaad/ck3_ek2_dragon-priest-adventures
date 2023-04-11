@@ -10,8 +10,24 @@ ek_sa_krosis.0001 = {
 				create_story = story_cycle_krosis
 				trigger_event = ek_sa_krosis.0002
 			}
+			any_liege_or_above = {
+				trigger_event = ek_sa_krosis.0002
+			}
 		}
 		set_global_variable = ek_sa_start_krosis
+		ek_sa_create_dragon_priest_effect = {
+			PRIEST = krosis
+			LOCATION = c_shearpoint
+		}
+		title:d_krosis = {
+			holder = {
+				save_scope_as = dragon_priest_krosis
+			}
+		}
+		set_global_variable = {
+			name = ek_sa_krosis_progress
+			value = 0
+		}
 	}
 }
 
@@ -27,29 +43,9 @@ ek_sa_krosis.0002 = {
 		animation = worry
 	}
 
-	immediate = {
-		hidden_effect = {
-			ek_sa_create_dragon_priest_effect = {
-				PRIEST = krosis
-				LOCATION = c_shearpoint
-			}
-			title:d_krosis = {
-				holder = {
-					save_scope_as = dragon_priest_krosis
-				}
-			}
-		}
-	}
-
 	option = {
 		flavor = ek_sa_krosis.0002.a.flavor
 		name = ek_sa_krosis.0002.a
-		hidden_effect = {
-			set_variable = {
-				name = ek_sa_krosis_progress
-				value = 0
-			}
-		}
 	}
 
 }
@@ -70,7 +66,7 @@ ek_sa_krosis.0003 = {
 		ai_chance = {
 			base = 50
 		}
-		change_variable = {
+		change_global_variable = {
 			name = ek_sa_krosis_progress
 			add = 1
 		}
@@ -86,7 +82,7 @@ ek_sa_krosis.0003 = {
 		ai_chance = {
 			base = 10
 		}
-		change_variable = {
+		change_global_variable = {
 			name = ek_sa_krosis_progress
 			add = 2
 		}
@@ -96,7 +92,7 @@ ek_sa_krosis.0003 = {
 		ai_chance = {
 			base = 10
 		}
-		change_variable = {
+		change_global_variable = {
 			name = ek_sa_krosis_progress
 			subtract = 1
 		}
@@ -127,13 +123,13 @@ ek_sa_krosis.0004 = {
 		scope:krosis = {
 			add_pressed_claim = title:c_shearpoint
 			start_war = {
-				cb = dragon_priest_claim_cb
+				cb = claim_cb
 				target = scope:war_target
 				target_title = title:c_shearpoint
 			}
 			spawn_army = {
 				men_at_arms = {
-					stacks = var:ek_sa_krosis_progress
+					stacks = global_var:ek_sa_krosis_progress
 					type = risen_dead
 				}
 				location = title:c_shearpoint.title_province
@@ -142,9 +138,9 @@ ek_sa_krosis.0004 = {
 			}
 			if = {
 				limit = {
-					var:ek_sa_krosis_progress > 20
+					global_var:ek_sa_krosis_progress > 20
 				}
-				change_variable = {
+				change_global_variable = {
 					name = ek_sa_krosis_progress
 					substract = 20
 				}
@@ -152,7 +148,7 @@ ek_sa_krosis.0004 = {
 				spawn_army = {
 					men_at_arms = {
 						type = dragons
-						stacks = var:ek_sa_krosis_progress
+						stacks = global_var:ek_sa_krosis_progress
 					}
 					inheritable = no
 					location = title:c_shearpoint.title_province
@@ -168,4 +164,176 @@ ek_sa_krosis.0005 = {
 	type = character_event
 	hidden = yes
 	# TODO - create krosis defeated event
+}
+
+ek_sa_krosis.0006 = {
+	type = character_event
+	title = ek_sa_krosis.0006.t
+	desc = ek_sa_krosis.0006.desc
+	theme = faith
+	immediate = {
+		ordered_courtier = {
+			ordered_knight = {
+				limit = {
+					is_imprisoned = no
+				}
+				order_by = prowess
+				position = 1
+				save_scope_as = volunteer_knight
+			}
+		}
+		if = {
+			limit = {
+				exists = cp:councillor_marshal
+			}
+			cp:councillor_marshal = {
+				save_scope_as = marshal
+			}
+		}
+		title:d_krosis = {
+			holder = {
+				save_scope_as = krosis
+			}
+		}
+	}
+
+	left_portrait = {
+		character = root
+		animation = aggresive_axe
+	}
+
+	right_portrait = {
+		character = scope:krosis
+		animation = aggresive_mace
+	}
+
+	lower_left_portrait = {
+		trigger = {
+			exists = scope:marshal
+		}
+		character = scope:marshal
+	}
+
+	lower_right_portrait = {
+		character = scope:volunteer_knight
+	}
+
+	option = {
+		name = ek_sa_krosis.0006.a
+		root = {
+			save_scope_as = attacker
+		}
+		highlight_portrait = root
+		trigger_event = {
+			days = 21
+			id = ek_sa_krosis.0007
+		}
+	}
+
+	option = {
+		name = ek_sa_krosis.0006.b
+		trigger = {
+			exists = scope:marshal
+		}
+		scope:marshal = {
+			save_scope_as = attacker
+		}
+		highlight_portrait = scope:marshal
+		trigger_event = {
+			days = 21
+			id = ek_sa_krosis.0007
+		}
+	}
+
+	option = {
+		name = ek_sa_krosis.0006.c
+		trigger = {
+			exists = scope:volunteer_knight
+		}
+		scope:volunteer_knight = {
+			save_scope_as = attacker
+		}
+		highlight_portrait = scope:volunteer_knight
+		trigger_event = {
+			days = 21
+			id = ek_sa_krosis.0007
+		}
+	}
+
+	option = {
+		name = ek_sa_krosis.0006.d
+		add_gold = 250
+	}
+}
+
+ek_sa_krosis.0007 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		scope:attacker = {
+			duel = {
+				skill = prowess
+				target = scope:krosis
+				50 = {
+					desc = ek_sa_krosis.0007.duel.success
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = 1
+					}
+					destroy_title = title:d_krosis
+					scope:krosis = {
+						every_character_artifact = {
+							set_owner = root
+						}
+						death = {
+							killer = scope:attacker
+							death_reason = death_duel
+						}
+					}
+					root = {
+						trigger_event = ek_sa_krosis.0008
+					}
+				}
+				50 = {
+					desc = ek_sa_krosis.0007.duel.failure
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -0.5
+					}
+					scope:attacker = {
+						death = {
+							killer = scope:krosis
+							death_reason = death_duel
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+ek_sa_krosis.0008 = {
+	type = character_event
+	theme = faith
+
+	desc = ek_sa_krosis.0008.desc
+	title = ek_sa_krosis.0008.t
+
+	immediate = {
+		set_global_variable = ek_sa_krosis_slain
+	}
+
+	left_portrait = {
+		character = scope:attacker
+		animation = victorious
+	}
+	right_portrait = {
+		character = scope:krosis
+		animation = fear
+	}
+
+	option = {
+		name = ek_sa_krosis.0008.a
+	}
 }

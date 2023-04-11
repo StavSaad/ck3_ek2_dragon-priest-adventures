@@ -1,0 +1,44 @@
+ek_sa_expedition_krosis_decision = {
+
+	desc = ek_sa_expedition_krosis_decision_desc
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+
+	ai_check_interval = 120
+
+	is_shown = {
+		has_global_variable = ek_sa_start_krosis
+		NOT = {
+			has_global_variable = ek_sa_krosis_slain
+		}
+		OR = {
+			title:c_shearpoint = {
+				holder = root
+			}
+			is_liege_or_above_of = title:c_shearpoint
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_at_war = no
+		is_available_adult = yes
+		is_imprisoned = no
+	}
+
+	cost = {
+		gold = 250
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+
+	effect = {
+		trigger_event =  ek_sa_krosis.0006
+	}
+
+}

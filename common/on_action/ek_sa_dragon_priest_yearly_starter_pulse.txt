@@ -59,6 +59,9 @@ ek_sa_progress_krosis = {
 	trigger = {
 		AND = {
 			has_global_variable = ek_sa_start_krosis
+			NOT = {
+				has_global_variable = ek_sa_krosis_slain
+			}
 			title:d_krosis = {
 				holder = {
 					is_at_war = no
@@ -84,7 +87,10 @@ ek_sa_start_war_krosis = {
 	trigger = {
 		AND = {
 			has_global_variable = ek_sa_start_krosis
-			var:ek_sa_krosis_progress > 10
+			NOT = {
+				has_global_variable = ek_sa_krosis_slain
+			}
+			global_var:ek_sa_krosis_progress > 10
 		}
 	}
 

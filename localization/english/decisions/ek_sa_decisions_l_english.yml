@@ -1,0 +1,5 @@
+﻿l_english:
+ ek_sa_expedition_krosis_decision:0 "Fund an expedition to $c_shearpoint$"
+ ek_sa_expedition_krosis_decision_tooltip:0 "Fund an expedition to $c_shearpoint$"
+ ek_sa_expedition_krosis_decision_desc:0 "Words of strange rumblings in $c_shearpoint$ are spreading through the realm. The people are afraid, as the rumors hint at an ancient lich residing there. We must fund an expedition to figure out what is going on there."
+ ek_sa_expedition_krosis_decision_confirm:0 "Let's see what is going on up there"

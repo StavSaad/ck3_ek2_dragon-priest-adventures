@@ -1,0 +1,18 @@
+fontfiles = {
+	name = "Dovahzul"
+	always_load = yes
+
+	group = {
+		languages = { "l_english" "l_french" "l_german" "l_russian" "l_spanish" "l_simp_chinese" "l_korean" }
+		files = { "fonts/Dovahzul/Dovahzul.otf" }
+	}
+}
+
+font = {
+	name = "DovahzulFont"
+
+	fontstyle = {
+		style = regular
+		fontfiles = "Dovahzul"
+	}
+}
