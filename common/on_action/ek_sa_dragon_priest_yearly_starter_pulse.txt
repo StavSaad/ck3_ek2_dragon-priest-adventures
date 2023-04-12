@@ -24,6 +24,7 @@ ek_sa_wake_dragon_priest = {
 		}
 		10 = ek_sa_start_krosis
 		10 = ek_sa_start_otar
+		10 = ek_sa_start_rahgot
 	}
 }
 
@@ -31,6 +32,7 @@ ek_sa_progress_dragon_priest = {
 	on_actions = {
 		ek_sa_progress_krosis
 		ek_sa_progress_otar
+		ek_sa_progress_rahgot
 	}
 }
 
@@ -74,6 +76,28 @@ ek_sa_start_otar = {
 
 	events = {
 		ek_sa_otar.0001
+	}
+
+}
+
+ek_sa_start_rahgot = {
+
+	trigger = {
+		NOT = {
+			has_global_variable = ek_sa_start_rahgot
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = -1
+			has_global_variable = ek_sa_start_rahgot
+		}
+	}
+
+	events = {
+		ek_sa_rahgot.0001
 	}
 
 }
@@ -122,6 +146,28 @@ ek_sa_progress_otar = {
 
 }
 
+ek_sa_progress_rahgot = {
+
+	trigger = {
+		AND = {
+			has_global_variable = ek_sa_start_rahgot
+			NOT = {
+				has_global_variable = ek_sa_rahgot_slain
+			}
+			title:d_rahgot = {
+				holder = {
+					is_at_war = no
+				}
+			}
+		}
+	}
+
+	events = {
+		ek_sa_rahgot.0003
+	}
+
+}
+
 ek_sa_start_war_dragon_priest = {
 	on_actions = {
 		delay = { months = { 3 8 } }
@@ -166,5 +212,24 @@ ek_sa_start_war_otar = {
 			value = 8
 		}
 		2 = ek_sa_otar.0004
+	}
+}
+
+ek_sa_start_war_rahgot = {
+	trigger = {
+		AND = {
+			has_global_variable = ek_sa_start_rahgot
+			NOT = {
+				has_global_variable = ek_sa_rahgot_slain
+			}
+			global_var:ek_sa_rahgot_progress > 10
+		}
+	}
+
+	random_events = {
+		chance_of_no_event = {
+			value = 8
+		}
+		2 = ek_sa_rahgot.0004
 	}
 }
