@@ -150,13 +150,13 @@ d_vokun={
 
 d_volsung={
 	pattern="pattern_nibeney.dds"
-	color1=skyrim_dgold
-	color2=white
-	color3=skyrim_gold
+	color1=white
+	color2=red
+	color3=black
 
 	colored_emblem={
-		color1=skyrim_dgold
-		color2=skyrim_dgold
+		color1=white
+		color2=white
 		texture="ce_mena_diamond_napkin.dds"
 		instance={
 			position={ 0.500000 0.000000 }
@@ -167,7 +167,7 @@ d_volsung={
 	}
 
 	colored_emblem={
-		color1=skyrim_gold
+		color1=black
 		texture="ce_nord_dragon.dds"
 		instance={
 			position={ 0.500000 0.415000 }

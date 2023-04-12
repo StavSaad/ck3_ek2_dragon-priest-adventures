@@ -103,7 +103,7 @@ d_vokun = {
 }
 
 d_volsung = {
-	color={ 38 38 38 }
+	color=red
 	
 
     ignore_titularity_for_title_weighting = yes
