@@ -26,6 +26,7 @@ ek_sa_wake_dragon_priest = {
 		10 = ek_sa_start_otar
 		10 = ek_sa_start_rahgot
 		10 = ek_sa_start_nahkriin
+		10 = ek_sa_start_vokun
 	}
 }
 
@@ -35,6 +36,7 @@ ek_sa_progress_dragon_priest = {
 		ek_sa_progress_otar
 		ek_sa_progress_rahgot
 		ek_sa_progress_nahkriin
+		ek_sa_progress_vokun
 	}
 }
 
@@ -126,6 +128,28 @@ ek_sa_start_nahkriin = {
 
 }
 
+ek_sa_start_vokun = {
+
+	trigger = {
+		NOT = {
+			has_global_variable = ek_sa_start_vokun
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = -1
+			has_global_variable = ek_sa_start_vokun
+		}
+	}
+
+	events = {
+		ek_sa_vokun.0001
+	}
+
+}
+
 ek_sa_progress_krosis = {
 
 	trigger = {
@@ -192,6 +216,28 @@ ek_sa_progress_rahgot = {
 
 }
 
+ek_sa_progress_vokun = {
+
+	trigger = {
+		AND = {
+			has_global_variable = ek_sa_start_vokun
+			NOT = {
+				has_global_variable = ek_sa_vokun_slain
+			}
+			title:d_vokun = {
+				holder = {
+					is_at_war = no
+				}
+			}
+		}
+	}
+
+	events = {
+		ek_sa_vokun.0003
+	}
+
+}
+
 ek_sa_progress_nahkriin = {
 
 	trigger = {
@@ -224,6 +270,8 @@ ek_sa_start_war_dragon_priest = {
 		ek_sa_start_war_rahgot
 		delay = { months = { 3 8 } }
 		ek_sa_start_war_nahkriin
+		delay = { months = { 3 8 } }
+		ek_sa_start_war_vokun
 	}
 }
 
@@ -300,5 +348,24 @@ ek_sa_start_war_nahkriin = {
 			value = 8
 		}
 		2 = ek_sa_nahkriin.0004
+	}
+}
+
+ek_sa_start_war_vokun = {
+	trigger = {
+		AND = {
+			has_global_variable = ek_sa_start_vokun
+			NOT = {
+				has_global_variable = ek_sa_vokun_slain
+			}
+			global_var:ek_sa_vokun_progress > 10
+		}
+	}
+
+	random_events = {
+		chance_of_no_event = {
+			value = 8
+		}
+		2 = ek_sa_vokun.0004
 	}
 }
