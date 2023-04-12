@@ -7,7 +7,6 @@ ek_sa_krosis.0001 = {
 	immediate = {
 		title:c_shearpoint = {
 			holder = {
-				create_story = story_cycle_krosis
 				trigger_event = ek_sa_krosis.0002
 				every_liege_or_above = {
 					trigger_event = ek_sa_krosis.0002
@@ -352,7 +351,7 @@ ek_sa_krosis.0007 = {
 			if = {
 				limit = {
 					NOT = {
-						scope:loser = scope:funder
+						scope:sc_loser = scope:funder
 					}
 				}
 				scope:funder = {
@@ -371,12 +370,26 @@ ek_sa_krosis.0008 = {
 	title = ek_sa_krosis.0008.t
 
 	left_portrait = {
-		character = scope:attacker
-		animation = victorious
+		character = scope:sc_victor
+		animation = celebrate_sword
+	}
+
+	right_portrait = {
+		character = scope:sc_loser
+		animation = shock
 	}
 
 	option = {
 		name = ek_sa_krosis.0008.a
+		scope:sc_victor = {
+			add_prestige = 500
+		}
+		scope:funder = {
+			add_prestige = 150
+		}
+		custom_description = {
+			text = ek_sa_krosis.0008.a.desc
+		}
 	}
 }
 
