@@ -6,6 +6,8 @@
 
 	ai_check_interval = 120
 
+	cooldown = { years = 1 }
+
 	is_shown = {
 		has_global_variable = ek_sa_start_krosis
 		NOT = {
@@ -50,6 +52,8 @@ ek_sa_expedition_otar_decision = {
 	major = yes
 
 	ai_check_interval = 120
+
+	cooldown = { years = 1 }
 
 	is_shown = {
 		has_global_variable = ek_sa_start_otar
