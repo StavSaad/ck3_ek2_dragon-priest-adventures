@@ -1,0 +1,414 @@
+﻿namespace = ek_sa_volsung
+
+ek_sa_volsung.0001 = {
+	type = empty
+	hidden = yes
+
+	immediate = {
+		title:c_deepwood = {
+			holder = {
+				trigger_event = ek_sa_volsung.0002
+				every_liege_or_above = {
+					trigger_event = ek_sa_volsung.0002
+				}
+			}
+		}
+		set_global_variable = ek_sa_start_volsung
+		ek_sa_create_dragon_priest_effect = {
+			PRIEST = volsung
+			LOCATION = c_deepwood
+		}
+		title:d_volsung = {
+			holder = {
+				save_scope_as = dragon_priest_volsung
+			}
+		}
+		set_global_variable = {
+			name = ek_sa_volsung_progress
+			value = 0
+		}
+	}
+}
+
+ek_sa_volsung.0002 = {
+	type = character_event
+	title = ek_sa_volsung.0002.t
+	desc = ek_sa_volsung.0002.desc
+
+	theme = faith
+
+	left_portrait = {
+		character = root
+		animation = worry
+	}
+
+	option = {
+		flavor = ek_sa_volsung.0002.a.flavor
+		name = ek_sa_volsung.0002.a
+	}
+
+}
+
+ek_sa_volsung.0003 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		title:d_volsung = {
+			holder = {
+				save_scope_as = dragon_priest_volsung
+			}
+		}
+	}
+
+	option = {
+		ai_chance = {
+			base = 50
+		}
+		change_global_variable = {
+			name = ek_sa_volsung_progress
+			add = 1
+		}
+	}
+
+	option = {
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	option = {
+		ai_chance = {
+			base = 10
+		}
+		change_global_variable = {
+			name = ek_sa_volsung_progress
+			add = 2
+		}
+	}
+
+	option = {
+		ai_chance = {
+			base = 10
+		}
+		change_global_variable = {
+			name = ek_sa_volsung_progress
+			subtract = 1
+		}
+	}
+
+}
+
+ek_sa_volsung.0004 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		title:d_volsung = {
+			holder = {
+				save_scope_as = volsung
+			}
+		}
+		title:c_deepwood = {
+			holder = {
+				top_liege = {
+					save_scope_as = war_target
+				}
+			}
+		}
+	}
+
+	option = {
+		scope:volsung = {
+			add_pressed_claim = title:c_deepwood
+			start_war = {
+				casus_belli = county_conquest_cb
+				target = scope:war_target
+				target_title = title:c_deepwood
+			}
+			spawn_army = {
+				men_at_arms = {
+					stacks = global_var:ek_sa_volsung_progress
+					type = risen_dead
+				}
+				location = title:c_deepwood.title_province
+				name = "risen_dead"
+				inheritable = no
+			}
+			if = {
+				limit = {
+					global_var:ek_sa_volsung_progress > 20
+				}
+				get_dragon_name = yes
+				spawn_army = {
+					men_at_arms = {
+						type = dragons
+						stacks = 1
+					}
+					inheritable = no
+					location = title:c_deepwood.title_province
+					save_scope_as = summoned_dragon
+					name = ek_religious_army
+				}
+			}
+		}
+	}
+}
+
+ek_sa_volsung.0005 = {
+	type = character_event
+	theme = faith
+
+	desc = ek_sa_volsung.0005.desc
+	title = ek_sa_volsung.0005.t
+
+	immediate = {
+		scope:loser = {
+			every_character_artifact = {
+				set_owner = scope:winner
+			}
+		}
+		hidden_effect = {
+			destroy_title = title:d_volsung
+			scope:loser = {
+				death = {
+					killer = scope:winner
+					death_reason = death_duel
+				}
+			}
+			set_global_variable = ek_sa_volsung_slain
+		}
+	}
+
+	option = {
+		name = ek_sa_volsung.0005.a
+	}
+}
+
+ek_sa_volsung.0006 = {
+	type = character_event
+	title = ek_sa_volsung.0006.t
+	desc = ek_sa_volsung.0006.desc
+	theme = faith
+	immediate = {
+		root = {
+			save_scope_as = funder
+		}
+		ordered_knight = {
+			limit = {
+				is_imprisoned = no
+			}
+			order_by = prowess
+			position = 1
+			save_scope_as = volunteer_knight
+		}
+		if = {
+			limit = {
+				exists = cp:councillor_marshal
+			}
+			cp:councillor_marshal = {
+				save_scope_as = marshal
+			}
+		}
+		title:d_volsung = {
+			holder = {
+				save_scope_as = volsung
+				save_scope_as = sc_defender
+			}
+		}
+		save_scope_value_as = {
+			name = fatality
+			value = flag:always
+		}
+		save_scope_value_as = {
+			name = locale
+			value = flag:terrain_scope
+		}
+	}
+
+	left_portrait = {
+		character = root
+		animation = aggresive_axe
+	}
+
+	right_portrait = {
+		character = scope:volsung
+		animation = aggresive_mace
+	}
+
+	lower_left_portrait = {
+		trigger = {
+			exists = scope:marshal
+		}
+		character = scope:marshal
+	}
+
+	lower_right_portrait = {
+		character = scope:volunteer_knight
+	}
+
+	option = {
+		name = ek_sa_volsung.0006.a
+		highlight_portrait = root
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = root
+			SC_ATTACKER = root
+			SC_DEFENDER = scope:volsung
+			FATALITY = no
+			FIXED = no
+			LOCALE = terrain_scope
+			OUTPUT_EVENT = ek_sa_volsung.0007
+			INVALIDATION_EVENT = ek_sa_volsung.0007	#In a real event, this would obviously be a different even to the output.
+		}
+	}
+
+	option = {
+		name = ek_sa_volsung.0006.b
+		trigger = {
+			exists = scope:marshal
+		}
+		scope:marshal = {
+			save_scope_as = sc_attacker
+		}
+		highlight_portrait = scope:marshal
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = root
+			SC_ATTACKER = scope:marshal
+			SC_DEFENDER = scope:volsung
+			FATALITY = no
+			FIXED = no
+			LOCALE = terrain_scope
+			OUTPUT_EVENT = ek_sa_volsung.0007
+			INVALIDATION_EVENT = ek_sa_volsung.0007	#In a real event, this would obviously be a different even to the output.
+		}
+	}
+
+	option = {
+		name = ek_sa_volsung.0006.c
+		trigger = {
+			exists = scope:volunteer_knight
+		}
+		scope:volunteer_knight = {
+			save_scope_as = sc_attacker
+		}
+		highlight_portrait = scope:volunteer_knight
+		configure_start_single_combat_effect = {
+			SC_INITIATOR = root
+			SC_ATTACKER = scope:volunteer_knight
+			SC_DEFENDER = scope:volsung
+			FATALITY = no
+			FIXED = no
+			LOCALE = terrain_scope
+			OUTPUT_EVENT = ek_sa_volsung.0007
+			INVALIDATION_EVENT = ek_sa_volsung.0007	#In a real event, this would obviously be a different even to the output.
+		}
+	}
+
+	option = {
+		name = ek_sa_volsung.0006.d
+		add_gold = 250
+	}
+}
+
+ek_sa_volsung.0007 = {
+	type = character_event
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = {
+				scope:sc_loser = scope:volsung
+			}
+			title:d_volsung = {
+				holder = {
+					every_character_artifact = {
+						set_owner = scope:funder
+					}
+				}
+			}
+			destroy_title = title:d_volsung
+			scope:volsung = {
+				death = {
+					killer = scope:victor
+					death_reason = death_duel
+				}
+			}
+			set_global_variable = ek_sa_volsung_slain
+			scope:funder = {
+				trigger_event = ek_sa_volsung.0008
+			}
+		}
+		if = {
+			limit = {
+				scope:sc_victor = scope:volsung
+			}
+			scope:sc_loser = {
+				death = {
+					killer = scope:volsung
+					death_reason = death_duel
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						scope:sc_loser = scope:funder
+					}
+				}
+				scope:funder = {
+					trigger_event = ek_sa_volsung.0009
+				}
+			}
+		}
+	}
+}
+
+ek_sa_volsung.0008 = {
+	type = character_event
+	theme = faith
+
+	desc = ek_sa_volsung.0008.desc
+	title = ek_sa_volsung.0008.t
+
+	left_portrait = {
+		character = scope:sc_victor
+		animation = celebrate_sword
+	}
+
+	right_portrait = {
+		character = scope:sc_loser
+		animation = shock
+	}
+
+	option = {
+		name = ek_sa_volsung.0008.a
+		scope:sc_victor = {
+			add_prestige = 500
+		}
+		scope:funder = {
+			add_prestige = 150
+		}
+		flavor = ek_sa_volsung.0008.a.flavor
+	}
+}
+
+ek_sa_volsung.0009 = {
+	type = character_event
+	theme = faith
+
+	desc = ek_sa_volsung.0009.desc
+	title = ek_sa_volsung.0009.t
+
+	left_portrait = {
+		character = scope:sc_loser
+		animation = fear
+	}
+
+	right_portrait = {
+		character = scope:funder
+		animation = worry
+	}
+
+	option = {
+		name = ek_sa_volsung.0009.a
+	}
+}
