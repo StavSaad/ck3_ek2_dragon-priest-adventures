@@ -10,7 +10,7 @@
  ek_sa_otar.0006.desc:0 "Our scouts have reported that a powerful draugr was seen inside of the ancient nordic ruins. We should send one of our champions to fight it!"
  ek_sa_otar.0006.a:0 "I will do it myself!"
  ek_sa_otar.0006.b:0 "My marshal will see to it"
- ek_sa_otar.0006.c:0 "My best knight will be up to the task"
+ ek_sa_otar.0006.c:0 "My best [GetPlayer.Custom( 'KnightCulture' )] will be up to the task"
  ek_sa_otar.0006.d:0 "It seems to powerful for us..."
  ek_sa_otar.0008.t:0 "The death of [sc_defender.GetFirstNameNicknamed]"
  ek_sa_otar.0008.desc:0 "The menace on the top of $c_ragnvald$ was finally slain by [sc_attacker.GetFullName]."
