@@ -90,7 +90,7 @@
 
 ek_sa_create_dragon_priest_effect = {
 	create_character = {
-		template = ek_sa_dragon_priest
+		template = ek_sa_dragon_priest_$PRIEST$
 		dynasty = none
 		location = title:$LOCATION$.title_province
 		save_scope_as = dragon_priest_$PRIEST$

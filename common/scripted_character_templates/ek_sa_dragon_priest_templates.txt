@@ -1,4 +1,4 @@
-﻿ek_sa_dragon_priest = {
+﻿ek_sa_dragon_priest_krosis = {
 	age = { 
 		value = current_year
 		subtract = 0
@@ -26,7 +26,7 @@
 	
 	#Personality
 	random_traits_list = {
-		count = 3
+		count = 2
 		wrathful = {}
 		arrogant = {}
 		brave = {}
@@ -36,7 +36,6 @@
 		stubborn = {}
 		vengeful = {}
 		patient = {}
-		zealous = {}
 		honest = {}
 		deceitful = {}
 	}
@@ -48,7 +47,7 @@
 	}
 }
 
-dragon_priest_nahkriin = {
+ek_sa_dragon_priest_nahkriin = {
 	age = { 
 		value = current_year
 		subtract = 0
@@ -74,11 +73,12 @@ dragon_priest_nahkriin = {
 	trait = education_learning_4
 	trait = arcana_good_3
 	trait = zealous
+	trait = vengeful
 	trait = physique_bad_2
 	
 	#Personality
 	random_traits_list = {
-		count = 3
+		count = 1
 		wrathful = {}
 		arrogant = {}
 		brave = {}
@@ -86,9 +86,7 @@ dragon_priest_nahkriin = {
 		diligent = {}
 		gregarious = {}
 		stubborn = {}
-		vengeful = {}
 		patient = {}
-		zealous = {}
 		honest = {}
 		deceitful = {}
 	}
@@ -100,7 +98,7 @@ dragon_priest_nahkriin = {
 	}
 }
 
-dragon_priest_otar = {
+ek_sa_dragon_priest_otar = {
 	age = { 
 		value = current_year
 		subtract = 0
@@ -126,11 +124,12 @@ dragon_priest_otar = {
 	trait = education_learning_4
 	trait = arcana_good_3
 	trait = zealous
+	trait = lunatic
 	trait = physique_bad_2
 	
 	#Personality
 	random_traits_list = {
-		count = 3
+		count = 2
 		wrathful = {}
 		arrogant = {}
 		brave = {}
@@ -140,7 +139,6 @@ dragon_priest_otar = {
 		stubborn = {}
 		vengeful = {}
 		patient = {}
-		zealous = {}
 		honest = {}
 		deceitful = {}
 	}
@@ -152,7 +150,7 @@ dragon_priest_otar = {
 	}
 }
 
-dragon_priest_rahgot = {
+ek_sa_dragon_priest_rahgot = {
 	age = { 
 		value = current_year
 		subtract = 0
@@ -178,12 +176,12 @@ dragon_priest_rahgot = {
 	trait = education_learning_4
 	trait = arcana_good_3
 	trait = zealous
+	trait = wrathful
 	trait = physique_bad_2
 	
 	#Personality
 	random_traits_list = {
-		count = 3
-		wrathful = {}
+		count = 1
 		arrogant = {}
 		brave = {}
 		ambitious = {}
@@ -192,7 +190,6 @@ dragon_priest_rahgot = {
 		stubborn = {}
 		vengeful = {}
 		patient = {}
-		zealous = {}
 		honest = {}
 		deceitful = {}
 	}
@@ -204,7 +201,7 @@ dragon_priest_rahgot = {
 	}
 }
 
-dragon_priest_vokun = {
+ek_sa_dragon_priest_vokun = {
 	age = { 
 		value = current_year
 		subtract = 0
@@ -227,14 +224,14 @@ dragon_priest_vokun = {
 	trait = necromancer
 	trait = lich_character
 	trait = education_magical_ability_4
-	trait = education_learning_4
+	trait = education_intrigue_4
 	trait = arcana_good_3
 	trait = zealous
 	trait = physique_bad_2
 	
 	#Personality
 	random_traits_list = {
-		count = 3
+		count = 2
 		wrathful = {}
 		arrogant = {}
 		brave = {}
@@ -244,7 +241,6 @@ dragon_priest_vokun = {
 		stubborn = {}
 		vengeful = {}
 		patient = {}
-		zealous = {}
 		honest = {}
 		deceitful = {}
 	}
@@ -256,7 +252,7 @@ dragon_priest_vokun = {
 	}
 }
 
-dragon_priest_morokei = {
+ek_sa_dragon_priest_morokei = {
 	age = { 
 		value = current_year
 		subtract = 0
@@ -282,21 +278,20 @@ dragon_priest_morokei = {
 	trait = education_learning_4
 	trait = arcana_good_3
 	trait = zealous
+	trait = ambitious
 	trait = physique_bad_2
 	
 	#Personality
 	random_traits_list = {
-		count = 3
+		count = 1
 		wrathful = {}
 		arrogant = {}
 		brave = {}
-		ambitious = {}
 		diligent = {}
 		gregarious = {}
 		stubborn = {}
 		vengeful = {}
 		patient = {}
-		zealous = {}
 		honest = {}
 		deceitful = {}
 	}
@@ -308,7 +303,7 @@ dragon_priest_morokei = {
 	}
 }
 
-dragon_priest_volsung = {
+ek_sa_dragon_priest_volsung = {
 	age = { 
 		value = current_year
 		subtract = 0
@@ -338,7 +333,7 @@ dragon_priest_volsung = {
 	
 	#Personality
 	random_traits_list = {
-		count = 3
+		count = 2
 		wrathful = {}
 		arrogant = {}
 		brave = {}
@@ -348,7 +343,6 @@ dragon_priest_volsung = {
 		stubborn = {}
 		vengeful = {}
 		patient = {}
-		zealous = {}
 		honest = {}
 		deceitful = {}
 	}
@@ -360,7 +354,7 @@ dragon_priest_volsung = {
 	}
 }
 
-dragon_priest_hevnoraak = {
+ek_sa_dragon_priest_hevnoraak = {
 	age = { 
 		value = current_year
 		subtract = 0
@@ -386,11 +380,12 @@ dragon_priest_hevnoraak = {
 	trait = education_learning_4
 	trait = arcana_good_3
 	trait = zealous
+	trait = sadistic
 	trait = physique_bad_2
 	
 	#Personality
 	random_traits_list = {
-		count = 3
+		count = 1
 		wrathful = {}
 		arrogant = {}
 		brave = {}
@@ -400,7 +395,6 @@ dragon_priest_hevnoraak = {
 		stubborn = {}
 		vengeful = {}
 		patient = {}
-		zealous = {}
 		honest = {}
 		deceitful = {}
 	}

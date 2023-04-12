@@ -164,18 +164,16 @@ ek_sa_krosis.0005 = {
 	title = ek_sa_krosis.0005.t
 
 	immediate = {
-		title:d_krosis = {
-			holder = {
-				every_character_artifact = {
-					set_owner = scope:defender
-				}
+		scope:loser = {
+			every_character_artifact = {
+				set_owner = scope:winner
 			}
 		}
 		hidden_effect = {
 			destroy_title = title:d_krosis
-			scope:attacker = {
+			scope:loser = {
 				death = {
-					killer = scope:defender
+					killer = scope:winner
 					death_reason = death_duel
 				}
 			}
