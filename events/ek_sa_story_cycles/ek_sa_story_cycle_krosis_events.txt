@@ -195,15 +195,13 @@ ek_sa_krosis.0006 = {
 		root = {
 			save_scope_as = funder
 		}
-		ordered_courtier = {
-			ordered_knight = {
-				limit = {
-					is_imprisoned = no
-				}
-				order_by = prowess
-				position = 1
-				save_scope_as = volunteer_knight
+		ordered_knight = {
+			limit = {
+				is_imprisoned = no
 			}
+			order_by = prowess
+			position = 1
+			save_scope_as = volunteer_knight
 		}
 		if = {
 			limit = {
