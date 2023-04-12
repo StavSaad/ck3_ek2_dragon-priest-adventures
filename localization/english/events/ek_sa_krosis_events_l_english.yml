@@ -15,7 +15,7 @@
  ek_sa_krosis.0008.t:0 "The death of [sc_defender.GetFirstNameNicknamed]"
  ek_sa_krosis.0008.desc:0 "The menace on the top of $c_shearpoint$ was finally slain by [sc_attacker.GetFullName]."
  ek_sa_krosis.0008.a:0 "Good Riddance!"
- ek_sa_krosis.0008.a.desc:0 "You keep [sc_loser.GetFirstNameNicknamed]'s dragon priest mask for yourself."
+ ek_sa_krosis.0008.a.flavor:0 "You keep [sc_loser.GetFirstNameNicknamed]'s dragon priest mask for yourself."
  ek_sa_krosis.0009.t:0 "The death of Hero"
  ek_sa_krosis.0009.desc:0 "[sc_attacker.GetFullName], Our great hero was slain by [sc_defender.GetFirstNameNicknamed]. He fought valiantly, may his soul go to [sc_attacker.GetFaith.DivineRealm]."
  ek_sa_krosis.0009.a:0 "What should I do?"

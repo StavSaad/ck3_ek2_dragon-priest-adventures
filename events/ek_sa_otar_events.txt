@@ -387,9 +387,7 @@ ek_sa_otar.0008 = {
 		scope:funder = {
 			add_prestige = 150
 		}
-		custom_description = {
-			text = ek_sa_otar.0008.a.desc
-		}
+		flavor = ek_sa_otar.0008.a.flavor
 	}
 }
 
