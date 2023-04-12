@@ -120,13 +120,13 @@ d_rahgot={
 
 d_vokun={
 	pattern="pattern_nibeney.dds"
-	color1=skyrim_dgold
-	color2=white
-	color3=skyrim_gold
+	color1=rgb { 195 200 195 }
+	color2=rgb { 180 185 180 }
+	color3=rgb { 77 77 88 }
 
 	colored_emblem={
-		color1=skyrim_dgold
-		color2=skyrim_dgold
+		color1=rgb { 195 200 195 }
+		color2=rgb { 195 200 195 }
 		texture="ce_mena_diamond_napkin.dds"
 		instance={
 			position={ 0.500000 0.000000 }
@@ -137,7 +137,7 @@ d_vokun={
 	}
 
 	colored_emblem={
-		color1=skyrim_gold
+		color1=rgb { 77 77 88 }
 		texture="ce_nord_dragon.dds"
 		instance={
 			position={ 0.500000 0.415000 }

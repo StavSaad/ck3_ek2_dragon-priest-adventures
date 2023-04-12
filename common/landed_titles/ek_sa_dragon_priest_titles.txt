@@ -83,7 +83,7 @@ d_otar = {
 }
 
 d_vokun = {
-	color={ 38 38 38 }
+	color={ 77 77 88 }
 	
 
     ignore_titularity_for_title_weighting = yes
