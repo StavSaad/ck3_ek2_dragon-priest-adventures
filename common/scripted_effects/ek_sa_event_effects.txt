@@ -109,3 +109,28 @@ ek_sa_create_dragon_priest_effect = {
 		}
 	}
 }
+
+ek_sa_dragon_priest_event_0001_immediate_effect = {
+	title:$LOCATION$ = {
+		holder = {
+			trigger_event = ek_sa_$PRIEST$.0002
+			every_liege_or_above = {
+				trigger_event = ek_sa_$PRIEST$.0002
+			}
+		}
+	}
+	set_global_variable = ek_sa_start_$PRIEST$
+	ek_sa_create_dragon_priest_effect = {
+		PRIEST = $PRIEST$
+		LOCATION = $LOCATION$
+	}
+	title:$PRIEST$ = {
+		holder = {
+			save_scope_as = dragon_priest_$PRIEST$
+		}
+	}
+	set_global_variable = {
+		name = ek_sa_$PRIEST$_progress
+		value = 0
+	}
+}

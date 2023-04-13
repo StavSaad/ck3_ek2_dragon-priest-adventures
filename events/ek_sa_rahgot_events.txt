@@ -5,27 +5,9 @@ ek_sa_rahgot.0001 = {
 	hidden = yes
 
 	immediate = {
-		title:c_smokefrost = {
-			holder = {
-				trigger_event = ek_sa_rahgot.0002
-				every_liege_or_above = {
-					trigger_event = ek_sa_rahgot.0002
-				}
-			}
-		}
-		set_global_variable = ek_sa_start_rahgot
-		ek_sa_create_dragon_priest_effect = {
+		ek_sa_dragon_priest_event_0001_immediate_effect = {
 			PRIEST = rahgot
 			LOCATION = c_smokefrost
-		}
-		title:d_rahgot = {
-			holder = {
-				save_scope_as = dragon_priest_rahgot
-			}
-		}
-		set_global_variable = {
-			name = ek_sa_rahgot_progress
-			value = 0
 		}
 	}
 }

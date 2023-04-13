@@ -5,27 +5,9 @@ ek_sa_volsung.0001 = {
 	hidden = yes
 
 	immediate = {
-		title:c_deepwood = {
-			holder = {
-				trigger_event = ek_sa_volsung.0002
-				every_liege_or_above = {
-					trigger_event = ek_sa_volsung.0002
-				}
-			}
-		}
-		set_global_variable = ek_sa_start_volsung
-		ek_sa_create_dragon_priest_effect = {
+		ek_sa_dragon_priest_event_0001_immediate_effect = {
 			PRIEST = volsung
 			LOCATION = c_deepwood
-		}
-		title:d_volsung = {
-			holder = {
-				save_scope_as = dragon_priest_volsung
-			}
-		}
-		set_global_variable = {
-			name = ek_sa_volsung_progress
-			value = 0
 		}
 	}
 }

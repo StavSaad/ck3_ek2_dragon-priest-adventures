@@ -5,27 +5,9 @@ ek_sa_nahkriin.0001 = {
 	hidden = yes
 
 	immediate = {
-		title:c_bitterblade = {
-			holder = {
-				trigger_event = ek_sa_nahkriin.0002
-				every_liege_or_above = {
-					trigger_event = ek_sa_nahkriin.0002
-				}
-			}
-		}
-		set_global_variable = ek_sa_start_nahkriin
-		ek_sa_create_dragon_priest_effect = {
+		ek_sa_dragon_priest_event_0001_immediate_effect = {
 			PRIEST = nahkriin
 			LOCATION = c_bitterblade
-		}
-		title:d_nahkriin = {
-			holder = {
-				save_scope_as = dragon_priest_nahkriin
-			}
-		}
-		set_global_variable = {
-			name = ek_sa_nahkriin_progress
-			value = 0
 		}
 	}
 }
