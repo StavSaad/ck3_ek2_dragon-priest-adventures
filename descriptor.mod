@@ -4,4 +4,5 @@ tags={
 	"Decisions"
 }
 name="EK - Dragon Priests Expanded"
+picture="thumbnail.png"
 supported_version="1.8.*"
