@@ -1,0 +1,13 @@
+ek_sa_dragon_priest_progress_trigger = {
+	AND = {
+		has_global_variable = ek_sa_start_$PRIEST$
+		NOT = {
+			has_global_variable = ek_sa_$PRIEST$_slain
+		}
+		title:d_$PRIEST$ = {
+			holder = {
+				is_at_war = no
+			}
+		}
+	}
+}
