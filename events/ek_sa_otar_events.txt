@@ -254,9 +254,14 @@ ek_sa_otar.0008 = {
 	}
 
 	option = {
-		ek_sa_dragon_priest_event_0008_option_effect = {
-			PRIEST = otar
+		name = ek_sa_otar.0008.a
+		scope:sc_victor = {
+			add_prestige = 500
 		}
+		scope:funder = {
+			add_prestige = 150
+		}
+		flavor = ek_sa_otar.0008.a.flavor
 	}
 }
 
