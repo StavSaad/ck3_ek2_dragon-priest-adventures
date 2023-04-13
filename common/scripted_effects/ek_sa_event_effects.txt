@@ -104,9 +104,6 @@ ek_sa_create_dragon_priest_effect = {
 		ek_sa_set_dragon_priest_name = {
 			PRIEST = $PRIEST$
 		}
-		add_character_flag = {
-			flag = dragon_priest_$PRIEST$
-		}
 	}
 }
 
@@ -124,7 +121,7 @@ ek_sa_dragon_priest_event_0001_immediate_effect = {
 		PRIEST = $PRIEST$
 		LOCATION = $LOCATION$
 	}
-	title:$PRIEST$ = {
+	title:d_$PRIEST$ = {
 		holder = {
 			save_scope_as = dragon_priest_$PRIEST$
 		}
