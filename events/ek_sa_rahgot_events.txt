@@ -93,9 +93,38 @@ ek_sa_rahgot.0004 = {
 	}
 
 	option = {
-		ek_sa_dragon_priest_event_0004_option_effect = {
-			PRIEST = rahgot
-			LOCATION = c_smokefrost
+		scope:rahgot = {
+			add_pressed_claim = title:c_smokefrost
+			start_war = {
+				casus_belli = county_conquest_cb
+				target = scope:war_target
+				target_title = title:c_smokefrost
+			}
+			spawn_army = {
+				men_at_arms = {
+					stacks = global_var:ek_sa_rahgot_progress
+					type = risen_dead
+				}
+				location = title:c_smokefrost.title_province
+				name = "risen_dead"
+				inheritable = no
+			}
+			if = {
+				limit = {
+					global_var:ek_sa_rahgot_progress > 20
+				}
+				get_dragon_name = yes
+				spawn_army = {
+					men_at_arms = {
+						type = dragons
+						stacks = 1
+					}
+					inheritable = no
+					location = title:c_smokefrost.title_province
+					save_scope_as = summoned_dragon
+					name = ek_religious_army
+				}
+			}
 		}
 	}
 }
