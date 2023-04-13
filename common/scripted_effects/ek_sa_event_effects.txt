@@ -196,3 +196,12 @@ ek_sa_dragon_priest_event_0007_immediate_effect = {
 		}
 	}
 }
+
+ek_sa_dragon_priest_event_0008_immediate_effect = {
+	scope:sc_victor = {
+		add_prestige = 500
+	}
+	scope:funder = {
+		add_prestige = 150
+	}
+}

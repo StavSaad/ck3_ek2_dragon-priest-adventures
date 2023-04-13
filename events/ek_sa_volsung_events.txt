@@ -282,14 +282,12 @@ ek_sa_volsung.0008 = {
 		animation = shock
 	}
 
+	immediate = {
+		ek_sa_dragon_priest_event_0008_immediate_effect = yes
+	}
+
 	option = {
 		name = ek_sa_volsung.0008.a
-		scope:sc_victor = {
-			add_prestige = 500
-		}
-		scope:funder = {
-			add_prestige = 150
-		}
 		flavor = ek_sa_volsung.0008.a.flavor
 	}
 }
