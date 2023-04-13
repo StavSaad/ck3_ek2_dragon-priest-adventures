@@ -11,3 +11,13 @@ ek_sa_dragon_priest_progress_trigger = {
 		}
 	}
 }
+
+ek_sa_dragon_priest_start_war_trigger = {
+	AND = {
+		has_global_variable = ek_sa_start_$PRIEST$
+		NOT = {
+			has_global_variable = ek_sa_$PRIEST$_slain
+		}
+		global_var:ek_sa_$PRIEST$_progress > 10
+	}
+}
