@@ -100,36 +100,6 @@ ek_sa_hevnoraak.0004 = {
 	}
 }
 
-ek_sa_hevnoraak.0005 = {
-	type = character_event
-	theme = faith
-
-	desc = ek_sa_hevnoraak.0005.desc
-	title = ek_sa_hevnoraak.0005.t
-
-	immediate = {
-		scope:loser = {
-			every_character_artifact = {
-				set_owner = scope:winner
-			}
-		}
-		hidden_effect = {
-			destroy_title = title:d_hevnoraak
-			scope:loser = {
-				death = {
-					killer = scope:winner
-					death_reason = death_duel
-				}
-			}
-			set_global_variable = ek_sa_hevnoraak_slain
-		}
-	}
-
-	option = {
-		name = ek_sa_hevnoraak.0005.a
-	}
-}
-
 ek_sa_hevnoraak.0006 = {
 	type = character_event
 	title = ek_sa_hevnoraak.0006.t
