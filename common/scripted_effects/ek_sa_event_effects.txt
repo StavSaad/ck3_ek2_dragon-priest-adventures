@@ -134,3 +134,54 @@ ek_sa_dragon_priest_event_0001_immediate_effect = {
 		value = 0
 	}
 }
+
+ek_sa_dragon_priest_event_0004_immediate_effect = {
+	title:d_$PRIEST$ = {
+		holder = {
+			save_scope_as = $PRIEST$
+		}
+	}
+	title:$LOCATION$ = {
+		holder = {
+			top_liege = {
+				save_scope_as = war_target
+			}
+		}
+	}
+}
+
+ek_sa_dragon_priest_event_0004_option_effect = {
+	scope:$PRIEST$ = {
+		add_pressed_claim = title:$LOCATION$
+		start_war = {
+			casus_belli = county_conquest_cb
+			target = scope:war_target
+			target_title = title:$LOCATION$
+		}
+		spawn_army = {
+			men_at_arms = {
+				stacks = global_var:ek_sa_$PRIEST$_progress
+				type = risen_dead
+			}
+			location = title:$LOCATION$.title_province
+			name = "risen_dead"
+			inheritable = no
+		}
+		if = {
+			limit = {
+				global_var:ek_sa_$PRIEST$_progress > 20
+			}
+			get_dragon_name = yes
+			spawn_army = {
+				men_at_arms = {
+					type = dragons
+					stacks = 1
+				}
+				inheritable = no
+				location = title:$LOCATION$.title_province
+				save_scope_as = summoned_dragon
+				name = ek_religious_army
+			}
+		}
+	}
+}
