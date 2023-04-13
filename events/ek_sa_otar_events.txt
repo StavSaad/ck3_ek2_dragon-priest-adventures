@@ -230,49 +230,8 @@ ek_sa_otar.0007 = {
 	hidden = yes
 
 	immediate = {
-		if = {
-			limit = {
-				scope:sc_loser = scope:otar
-			}
-			title:d_otar = {
-				holder = {
-					every_character_artifact = {
-						set_owner = scope:funder
-					}
-				}
-			}
-			destroy_title = title:d_otar
-			scope:otar = {
-				death = {
-					killer = scope:victor
-					death_reason = death_duel
-				}
-			}
-			set_global_variable = ek_sa_otar_slain
-			scope:funder = {
-				trigger_event = ek_sa_otar.0008
-			}
-		}
-		if = {
-			limit = {
-				scope:sc_victor = scope:otar
-			}
-			scope:sc_loser = {
-				death = {
-					killer = scope:otar
-					death_reason = death_duel
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						scope:sc_loser = scope:funder
-					}
-				}
-				scope:funder = {
-					trigger_event = ek_sa_otar.0009
-				}
-			}
+		ek_sa_dragon_priest_event_0007_immediate_effect = {
+			PRIEST = otar
 		}
 	}
 }

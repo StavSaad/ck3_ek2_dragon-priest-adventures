@@ -230,49 +230,8 @@ ek_sa_morokei.0007 = {
 	hidden = yes
 
 	immediate = {
-		if = {
-			limit = {
-				scope:sc_loser = scope:morokei
-			}
-			title:d_morokei = {
-				holder = {
-					every_character_artifact = {
-						set_owner = scope:funder
-					}
-				}
-			}
-			destroy_title = title:d_morokei
-			scope:morokei = {
-				death = {
-					killer = scope:victor
-					death_reason = death_duel
-				}
-			}
-			set_global_variable = ek_sa_morokei_slain
-			scope:funder = {
-				trigger_event = ek_sa_morokei.0008
-			}
-		}
-		if = {
-			limit = {
-				scope:sc_victor = scope:morokei
-			}
-			scope:sc_loser = {
-				death = {
-					killer = scope:morokei
-					death_reason = death_duel
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						scope:sc_loser = scope:funder
-					}
-				}
-				scope:funder = {
-					trigger_event = ek_sa_morokei.0009
-				}
-			}
+		ek_sa_dragon_priest_event_0007_immediate_effect = {
+			PRIEST = morokei
 		}
 	}
 }

@@ -230,49 +230,8 @@ ek_sa_volsung.0007 = {
 	hidden = yes
 
 	immediate = {
-		if = {
-			limit = {
-				scope:sc_loser = scope:volsung
-			}
-			title:d_volsung = {
-				holder = {
-					every_character_artifact = {
-						set_owner = scope:funder
-					}
-				}
-			}
-			destroy_title = title:d_volsung
-			scope:volsung = {
-				death = {
-					killer = scope:victor
-					death_reason = death_duel
-				}
-			}
-			set_global_variable = ek_sa_volsung_slain
-			scope:funder = {
-				trigger_event = ek_sa_volsung.0008
-			}
-		}
-		if = {
-			limit = {
-				scope:sc_victor = scope:volsung
-			}
-			scope:sc_loser = {
-				death = {
-					killer = scope:volsung
-					death_reason = death_duel
-				}
-			}
-			if = {
-				limit = {
-					NOT = {
-						scope:sc_loser = scope:funder
-					}
-				}
-				scope:funder = {
-					trigger_event = ek_sa_volsung.0009
-				}
-			}
+		ek_sa_dragon_priest_event_0007_immediate_effect = {
+			PRIEST = volsung
 		}
 	}
 }
