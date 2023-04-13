@@ -135,38 +135,8 @@ ek_sa_volsung.0006 = {
 	desc = ek_sa_volsung.0006.desc
 	theme = faith
 	immediate = {
-		root = {
-			save_scope_as = funder
-		}
-		ordered_knight = {
-			limit = {
-				is_imprisoned = no
-			}
-			order_by = prowess
-			position = 1
-			save_scope_as = volunteer_knight
-		}
-		if = {
-			limit = {
-				exists = cp:councillor_marshal
-			}
-			cp:councillor_marshal = {
-				save_scope_as = marshal
-			}
-		}
-		title:d_volsung = {
-			holder = {
-				save_scope_as = volsung
-				save_scope_as = sc_defender
-			}
-		}
-		save_scope_value_as = {
-			name = fatality
-			value = flag:always
-		}
-		save_scope_value_as = {
-			name = locale
-			value = flag:terrain_scope
+		ek_sa_dragon_priest_event_0006_immediate_effect = {
+			PRIEST = volsung
 		}
 	}
 

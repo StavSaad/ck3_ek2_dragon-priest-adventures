@@ -150,6 +150,42 @@ ek_sa_dragon_priest_event_0004_immediate_effect = {
 	}
 }
 
+ek_sa_dragon_priest_event_0006_immediate_effect = {
+	root = {
+		save_scope_as = funder
+	}
+	ordered_knight = {
+		limit = {
+			is_imprisoned = no
+		}
+		order_by = prowess
+		position = 1
+		save_scope_as = volunteer_knight
+	}
+	if = {
+		limit = {
+			exists = cp:councillor_marshal
+		}
+		cp:councillor_marshal = {
+			save_scope_as = marshal
+		}
+	}
+	title:d_$PRIEST$ = {
+		holder = {
+			save_scope_as = $PRIEST$
+			save_scope_as = sc_defender
+		}
+	}
+	save_scope_value_as = {
+		name = fatality
+		value = flag:always
+	}
+	save_scope_value_as = {
+		name = locale
+		value = flag:terrain_scope
+	}
+}
+
 ek_sa_dragon_priest_event_0007_immediate_effect = {
 	if = {
 		limit = {
