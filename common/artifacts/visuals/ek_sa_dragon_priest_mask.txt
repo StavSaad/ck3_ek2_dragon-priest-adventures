@@ -1,0 +1,39 @@
+mask_dragon_priest_krosis = {
+	icon = "dragon_priest_mask_krosis.dds"
+	asset = male_headgear_religious_dragon_priest_entity
+}
+
+mask_dragon_priest_nahkriin = {
+	icon = "dragon_priest_mask_nahkriin.dds"
+	asset = male_headgear_religious_dragon_priest_entity
+}
+
+mask_dragon_priest_otar = {
+	icon = "dragon_priest_mask_otar.dds"
+	asset = male_headgear_religious_dragon_priest_entity
+}
+
+mask_dragon_priest_rahgot = {
+	icon = "dragon_priest_mask_rahgot.dds"
+	asset = male_headgear_religious_dragon_priest_entity
+}
+
+mask_dragon_priest_vokun = {
+	icon = "dragon_priest_mask_vokun.dds"
+	asset = male_headgear_religious_dragon_priest_entity
+}
+
+mask_dragon_priest_volsung = {
+	icon = "dragon_priest_mask_volsung.dds"
+	asset = male_headgear_religious_dragon_priest_entity
+}
+
+mask_dragon_priest_morokei = {
+	icon = "dragon_priest_mask_morokei.dds"
+	asset = male_headgear_religious_dragon_priest_entity
+}
+
+mask_dragon_priest_hevnoraak = {
+	icon = "dragon_priest_mask_hevnoraak.dds"
+	asset = male_headgear_religious_dragon_priest_entity
+}
