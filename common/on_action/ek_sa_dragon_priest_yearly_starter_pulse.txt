@@ -29,6 +29,7 @@ ek_sa_wake_dragon_priest = {
 		10 = ek_sa_start_vokun
 		10 = ek_sa_start_volsung
 		10 = ek_sa_start_hevnoraak
+		10 = ek_sa_start_morokei
 	}
 }
 
@@ -41,6 +42,7 @@ ek_sa_progress_dragon_priest = {
 		ek_sa_progress_vokun
 		ek_sa_progress_volsung
 		ek_sa_progress_hevnoraak
+		ek_sa_progress_morokei
 	}
 }
 
@@ -194,6 +196,28 @@ ek_sa_start_hevnoraak = {
 
 	events = {
 		ek_sa_hevnoraak.0001
+	}
+
+}
+
+ek_sa_start_morokei = {
+
+	trigger = {
+		NOT = {
+			has_global_variable = ek_sa_start_morokei
+		}
+	}
+
+	weight_multiplier = {
+		base = 1
+		modifier = {
+			add = -1
+			has_global_variable = ek_sa_start_morokei
+		}
+	}
+
+	events = {
+		ek_sa_morokei.0001
 	}
 
 }
@@ -352,6 +376,28 @@ ek_sa_progress_hevnoraak = {
 
 }
 
+ek_sa_progress_morokei = {
+
+	trigger = {
+		AND = {
+			has_global_variable = ek_sa_start_morokei
+			NOT = {
+				has_global_variable = ek_sa_morokei_slain
+			}
+			title:d_morokei = {
+				holder = {
+					is_at_war = no
+				}
+			}
+		}
+	}
+
+	events = {
+		ek_sa_morokei.0003
+	}
+
+}
+
 ek_sa_start_war_dragon_priest = {
 	on_actions = {
 		delay = { months = { 3 8 } }
@@ -368,6 +414,8 @@ ek_sa_start_war_dragon_priest = {
 		ek_sa_start_war_volsung
 		delay = { months = { 3 8 } }
 		ek_sa_start_war_hevnoraak
+		delay = { months = { 3 8 } }
+		ek_sa_start_war_morokei
 	}
 }
 
@@ -501,5 +549,24 @@ ek_sa_start_war_hevnoraak = {
 			value = 8
 		}
 		2 = ek_sa_hevnoraak.0004
+	}
+}
+
+ek_sa_start_war_morokei = {
+	trigger = {
+		AND = {
+			has_global_variable = ek_sa_start_morokei
+			NOT = {
+				has_global_variable = ek_sa_morokei_slain
+			}
+			global_var:ek_sa_morokei_progress > 10
+		}
+	}
+
+	random_events = {
+		chance_of_no_event = {
+			value = 8
+		}
+		2 = ek_sa_morokei.0004
 	}
 }
