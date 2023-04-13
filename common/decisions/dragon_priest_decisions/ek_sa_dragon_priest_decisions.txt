@@ -279,3 +279,50 @@ ek_sa_expedition_volsung_decision = {
 	}
 
 }
+
+ek_sa_expedition_hevnoraak_decision = {
+
+	desc = ek_sa_expedition_hevnoraak_decision_desc
+	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	major = yes
+
+	ai_check_interval = 120
+
+	cooldown = { years = 1 }
+
+	is_shown = {
+		has_global_variable = ek_sa_start_hevnoraak
+		NOT = {
+			has_global_variable = ek_sa_hevnoraak_slain
+		}
+		OR = {
+			title:c_valthume = {
+				holder = root
+			}
+			is_liege_or_above_of = title:c_valthume.holder
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_at_war = no
+		is_available_adult = yes
+		is_imprisoned = no
+	}
+
+	cost = {
+		gold = 250
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+
+	effect = {
+		trigger_event =  ek_sa_hevnoraak.0006
+	}
+
+}

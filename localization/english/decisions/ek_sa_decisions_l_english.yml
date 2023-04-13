@@ -23,3 +23,7 @@
  ek_sa_expedition_volsung_decision_tooltip:0 "Fund an expedition to $c_deepwood$"
  ek_sa_expedition_volsung_decision_desc:0 "Words of strange rumblings in $c_deepwood$ are spreading through the realm. The people are afraid, as the rumors hint at an ancient lich residing there. We must fund an expedition to figure out what is going on there."
  ek_sa_expedition_volsung_decision_confirm:0 "Let's see what is going on in there"
+ ek_sa_expedition_hevnoraak_decision:0 "Fund an expedition to $c_valthume$"
+ ek_sa_expedition_hevnoraak_decision_tooltip:0 "Fund an expedition to $c_valthume$"
+ ek_sa_expedition_hevnoraak_decision_desc:0 "Words of strange rumblings in $c_valthume$ are spreading through the realm. The people are afraid, as the rumors hint at an ancient lich residing there. We must fund an expedition to figure out what is going on there."
+ ek_sa_expedition_hevnoraak_decision_confirm:0 "Let's see what is going on in there"

@@ -180,13 +180,13 @@ d_volsung={
 
 d_morokei={
 	pattern="pattern_nibeney.dds"
-	color1=skyrim_dgold
-	color2=white
-	color3=skyrim_gold
+	color1=rgb { 134 137 95 }
+	color2=rgb { 138 105 88 }
+	color3=rgb { 46 36 36 }
 
 	colored_emblem={
-		color1=skyrim_dgold
-		color2=skyrim_dgold
+		color1=rgb { 46 36 36 }
+		color2=rgb { 46 36 36 }
 		texture="ce_mena_diamond_napkin.dds"
 		instance={
 			position={ 0.500000 0.000000 }
@@ -197,7 +197,7 @@ d_morokei={
 	}
 
 	colored_emblem={
-		color1=skyrim_gold
+		color1=rgb { 46 36 36 }
 		texture="ce_nord_dragon.dds"
 		instance={
 			position={ 0.500000 0.415000 }
@@ -210,13 +210,13 @@ d_morokei={
 
 d_hevnoraak={
 	pattern="pattern_nibeney.dds"
-	color1=skyrim_dgold
-	color2=white
-	color3=skyrim_gold
+	color1=skyrim_mmauve
+	color2=skyrim_lmauve
+	color3=white
 
 	colored_emblem={
-		color1=skyrim_dgold
-		color2=skyrim_dgold
+		color1=skyrim_dmauve
+		color2=skyrim_dmauve
 		texture="ce_mena_diamond_napkin.dds"
 		instance={
 			position={ 0.500000 0.000000 }
@@ -227,7 +227,7 @@ d_hevnoraak={
 	}
 
 	colored_emblem={
-		color1=skyrim_gold
+		color1=skyrim_mmauve
 		texture="ce_nord_dragon.dds"
 		instance={
 			position={ 0.500000 0.415000 }
