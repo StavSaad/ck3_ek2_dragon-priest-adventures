@@ -100,7 +100,7 @@ ek_sa_create_dragon_priest_effect = {
 			OWNER = scope:dragon_priest_$PRIEST$
 		}
 		get_title = title:d_$PRIEST$
-		# change_government = theocracy_government
+		# change_government = hierocracy_government
 		ek_sa_set_dragon_priest_name = {
 			PRIEST = $PRIEST$
 		}

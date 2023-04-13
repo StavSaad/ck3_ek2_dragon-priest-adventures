@@ -1,0 +1,9 @@
+duke_dragon_priest = {
+	type = character
+	special = holder
+	priority = 39
+	titles = { d_krosis d_nahkriin d_otar d_rahgot d_vokun d_volsung d_morokei d_hevnoraak }
+	only_independent = yes
+	heritages = { heritage_atmoran }
+	tier = duchy
+}
